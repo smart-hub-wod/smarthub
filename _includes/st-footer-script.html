@@ -1,0 +1,84 @@
+<!-- load more button script for blog image -->
+<script>
+  $(document).ready(function() {
+    $('.more').click(function() {
+      $('.card-columns div.blog-details,.blog-archive div.single-blog').slideDown(500);
+      $('.more').hide();
+    });
+  });
+
+</script>
+
+<!-- fancybox script starts -->
+<script type="text/javascript" src="/assets/js/jquery-latest.min.js"></script>
+<script type="text/javascript" src="/assets/fancybox/jquery.fancybox.pack.js"></script>
+<!-- fancy box script for gallery ends -->
+<!-- bootstrap script -->
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<!-- Logo-carousel starts-->
+<script src="/assets/js/slick.js"></script>
+<!-- Logo-carousel ends-->
+<!-- logo carousel script for index page -->
+<script>
+  $(document).ready(function(){
+    $('.post-categories').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: false,
+        arrows: false,
+        dots: false,
+        pauseOnHover: true,
+        responsive: [{
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 4
+            }
+        },{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 2
+            }
+        }]
+    });
+});
+</script>
+
+<script>
+  /* navbar toggler script for header */
+function navbartoggle(x) {
+  x.classList.toggle("change");
+}
+
+ /* fancy box script */
+ $(document).ready(function() {
+   $(".fancybox").fancybox({
+     openEffect: 'none',
+     closeEffect: 'none'
+   });
+ });
+
+/* dropdown toggle script for header */
+$(document).ready(function() {
+  $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+    if (!$(this).next().hasClass('show')) {
+      $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+    }
+    var $subMenu = $(this).next(".dropdown-menu");
+    $subMenu.toggleClass('show');
+    $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+      $('.dropdown-submenu .show').removeClass("show");
+    });
+    return false;
+  });
+});
+</script>
+
+</body>
+<!-- body section ends -->
+</html>

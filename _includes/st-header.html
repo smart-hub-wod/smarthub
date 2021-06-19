@@ -1,0 +1,88 @@
+{% if site.logo-width !=null %}
+{% assign width = site.logo-width %}
+{% else %}
+{% assign width = "150px" %}
+{% endif %}
+
+<!-- header section starts -->
+<div class="header fixed-top">
+  <div class="navbar navbar-expand-lg mainmenu p-md-0">
+    <div class="container">
+    <!-- logo for your website -->
+    <a class="navbar-brand" href="/"><img src="{{site.logo}}" alt="logo" width="{{width}}" class="img-fluid"></a>
+    <div class="header-widget order-lg-2 d-none d-lg-flex">
+      <div class="mr-5">
+        <form class="d-inline" action="/search-no-result/" method="">
+        <div class="input-group">
+          <input class="form-control" type="text" placeholder="Search Stocky" aria-label="Search" required>
+          <div class="input-group-append">
+            <button type="submit"><i class="fas fa-search text-grey" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </form>
+      </div>
+      <ul class="navbar-nav">
+        <li class="dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown">Account <i class="fas fa-angle-down"></i></a>
+        <ul class="dropdown-menu list-unstyled">
+          <li><a href="/login/">Login</a></li>
+          <li><a href="/signup/">Signup</a></li>
+        </ul>
+        </li>
+        <li class="cart"><a href="/checkout/" class="nav-link"><i class="fas fa-shopping-cart"></i></a></li>
+      </ul>
+    </div>
+    <!-- navbar toggler icon -->
+    <div class="d-flex align-items-center">
+      <button onclick="navbartoggle(this)" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span>
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </span>
+      </button>
+      <div class="mobile-header-widget d-lg-none">
+        <a href="/login/" class="mr-2"><i class="fas fa-user-circle"></i></a>
+        <a href="/checkout/" class="cart"><i class="fas fa-shopping-cart"></i></a>
+      </div>
+    </div>
+
+    <!-- header main menu starts -->
+    <nav class="collapse navbar-collapse justify-content-start" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        {% for level1 in site.data.st-menu.menu %}
+        {% if level1.option != null %}
+        <li class="dropdown d-lg-none">
+          <a style="position:absolute; right:0;" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"></a>
+          <a class="nav-link" href="{{ level1.href }}">{{ level1.title }}</a>
+          <ul class="dropdown-menu">
+            {% for level2 in level1.option %}
+            <li>
+              <a href="{{ level2.href }}">{{ level2.title }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
+        <li class="dropdown d-none d-lg-block">
+          <a class="nav-link" href="{{ level1.href }}">{{ level1.title }} <i class="fas fa-angle-down"></i></a>
+          <ul class="dropdown-menu">
+            {% for level2 in level1.option %}
+            <li>
+              <a href="{{ level2.href }}">{{ level2.title }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% else %}
+        <li>
+          <a class="nav-link" href="{{ level1.href }}">{{ level1.title }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+    <!-- main menu ends -->
+    </div>
+  </div>
+</div>
+<!-- header section ends -->

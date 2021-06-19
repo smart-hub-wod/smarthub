@@ -1,0 +1,109 @@
+---
+layout: default
+title: Home
+---
+<section class="home-search-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <img src="/assets/images/stocky/stocky-logo.png" class="img-fluid" alt="logo">
+        <h3 class="mb-4">a jekyll marketplace theme <br>to sell digital products online.</h3>
+        <form class="" action="/search-result/" method="">
+          <div class="input-group">
+            <input class="form-control" type="text" placeholder="Search stocky" aria-label="Search" required>
+            <div class="input-group-append">
+              <button type="submit"><i class="fas fa-search text-grey" aria-hidden="true"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-post-category-section">
+  <div class="container">
+    <div class="logo-carousel">
+      <div class="post-categories slider">
+        <div class="slide">
+          {% for post in site.tags.Products reversed %}
+          {% if forloop.index < 5 %} <p><strong><a href="/shop-archive/">{{ post.categories }}</a></strong></p>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <div class="slide">
+          {% for post in site.tags.Products reversed %}
+          {% if forloop.index > 4 and forloop.index < 9 %} <p><strong><a href="/shop-archive/">{{ post.categories }}</a></strong></p>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <div class="slide">
+          {% for post in site.tags.Products reversed %}
+          {% if forloop.index > 8 and forloop.index < 13 %} <p><strong><a href="/shop-archive/">{{ post.categories }}</a></strong></p>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <div class="slide">
+          {% for post in site.tags.Products reversed %}
+          {% if forloop.index > 12 and forloop.index < 17 %} <p><strong><a href="/shop-archive/">{{ post.categories }}</a></strong></p>
+            {% endif %}
+            {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-blog-image-section">
+  <div class="container">
+    <h2 class="font-weight-bold">Explore Stocky’s Collection</h2>
+    <h2 class="mb-4">of creative assets & royalty free stock assets</h2>
+    {% include st-shop-image-archive.html %}
+  </div>
+</section>
+
+<section class="home-icon-block-section">
+  <div class="container">
+    <h2>What make’s us different</h2>
+    {% include st-info-block.html tag="home-1" laptop=3 tablet=3 mobile=1 content-alignment="left"%}
+  </div>
+</section>
+
+<section class="home-content-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 left-bg">
+        <h3 class="mb-3">Create a Marketplace or Sell Your Own Photos</h3>
+        <p>Stocky makes it easy to create a site to sell your own photos using the Easy Digital
+          Downloads plugin or you can create a marketplace and let anybody sell their photos
+          with help from the Frontend Submissions extension for Easy Digital Downloads.</p>
+        <div class="hero-button">
+          <div class="hero-bg-button bg-button">
+            <a href="http://go.scube.co/stocky" class="btn">Buy Stocky Theme</a>
+          </div>
+          <div class="hero-icon-button icon-button">
+            <a href="/features/" class="btn">Check out Stocky’s Features</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 right-bg">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-hero-content-section">
+  <div class="container">
+    {% include st-hero-content.html tag="home-1" layout="image-right" vertical-alignment="center" %}
+  </div>
+</section>
+
+  <section class="home-post-section">
+    {% include st-three-blog.html %}
+  </section>
+
+<section class="home-hero-content-section pb-4">
+  <div class="container">
+    {% include st-hero-content.html tag="home-2" layout="image-left" vertical-alignment="center" %}
+  </div>
+</section>

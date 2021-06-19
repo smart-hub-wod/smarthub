@@ -1,0 +1,115 @@
+{% if include.tag != null and include.layout != null %}
+
+{% if include.layout == "image-right" %}
+{% assign i = "order-md-1" %}
+{% assign j = "order-md-2" %}
+{% endif %}
+
+{% if include.layout == "image-left" %}
+{% assign i = "order-md-2" %}
+{% assign j = "order-md-1" %}
+{% endif %}
+
+
+{% if include.mobile-image-order == "bottom" %}
+{% assign k = "order-1" %}
+{% assign l = "order-2" %}
+{% endif %}
+
+{% if include.mobile-image-order == "top" %}
+{% assign k = "order-2" %}
+{% assign l = "order-1" %}
+{% endif %}
+
+{% if include.mobile-image-order == null and include.layout == "image-left" %}
+{% assign i = "order-2" %}
+{% assign j = "order-1" %}
+{% endif %}
+
+{% if include.vertical-alignment == "top" %}
+{% assign m = "align-self-start" %}
+{% endif %}
+
+{% if include.vertical-alignment == "center" %}
+{% assign m = "align-self-center" %}
+{% endif %}
+
+{% if include.vertical-alignment == "bottom" %}
+{% assign m = "align-self-end" %}
+{% endif %}
+
+<div class="st-hero-content {{ include.class }}">
+  <div class="row">
+    {% for level1 in site.data.st-hero-content.hero-content %}
+    {% if level1.tag == include.tag %}
+    <div class="mx-md-auto col-md-4 {{ i }} {{ k }} {{ m }} hero-content-column text-center">
+          {% if level1.title != null %}
+          <!-- hero content title -->
+          <div class="hero-title">
+            <h2>{{ level1.title }}</h2>
+          </div>
+          {% endif %}
+          {% if level1.description != null %}
+          <!-- hero content description -->
+          <p class="hero-description">{{ level1.description }}</p>
+          {% endif %}
+          {% if level1.signature-image != null %}
+          <!-- hero content signture image -->
+          <img src="{{level1.signature-image}}" class="img-fluid signature-image" alt="signature-image">
+          {% endif %}
+          <div class="hero-button">
+            {% for level2 in level1.button %}
+            <!-- hero content button -->
+              {% if level2.button-name != null %}
+              <!-- hero content bg button -->
+              <div class="hero-bg-button bg-button">
+              <a href="{{ level2.button-href }}" class="btn" role="button">{{ level2.button-name }}</a>
+              </div>
+              {% endif %}
+              {% if level2.icon-button-name != null %}
+              <!-- hero content icon button -->
+              {% if level2.button-name != null %}
+              <div class="hero-icon-button icon-button">
+              {% else %}
+              <div class="hero-icon-button icon-button">
+                  {% endif %}
+                <a href="{{ level2.icon-button-href }}" class="btn" role="button">{{ level2.icon-button-name }} </a>
+              </div>
+              {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="col-md-4 {{ j }} {{ l }} {{ m }} text-center hero-content-column">
+      {% if level1.image != null %}
+      <!-- hero content image -->
+      <div class="hero-image">
+        {% if level1.image-link != null %}
+        <a href="{{ level1.image-link }}">
+          {% else %}
+        <a href="{{ level1.image }}" class="fancybox">
+          {% endif %}
+          <img class="img-fluid" src="{{ level1.image }}" alt="dummy">
+          </a>
+      </div>
+{% endif %}
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+
+
+
+{% else %}
+<!-- error message for layout and tag -->
+<p class="text-center">Use include variables for layout and tag</p>
+{% endif %}
+
+{% assign i = "" %}
+{% assign j = "" %}
+{% assign k = "" %}
+{% assign l = "" %}
+{% assign m = "" %}
+{% assign a = "" %}
+{% assign b = "" %}

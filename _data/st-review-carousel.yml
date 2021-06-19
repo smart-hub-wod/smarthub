@@ -1,0 +1,20 @@
+st-review-carousel:
+- user-image: "/assets/images/stocky/img3.jpg"  # Use user-image path here
+  user-name: Daniel  # Use user name here
+  review-star: 4  # Use number upto 5 only
+  review-content: The first step in the process in replacing negatives with positives in your life is to make a decision to start looking for the negative messages and ways to replace them with positives.
+
+- user-image: "/assets/images/stocky/img3.jpg"  # Use user-image path here
+  user-name: Stephen  # Use user name here
+  review-star: 2  # Use number upto 5 only
+  review-content: The first step in the process in replacing negatives with positives in your life is to make a decision to start looking for the negative messages and ways to replace them with positives.
+
+- user-image: "/assets/images/stocky/img3.jpg"  # Use user-image path here
+  user-name: Jack  # Use user name here
+  review-star: 3  # Use number upto 5 only
+  review-content: The first step in the process in replacing negatives with positives in your life is to make a decision to start looking for the negative messages and ways to replace them with positives.
+
+- user-image: "/assets/images/stocky/img3.jpg"  # Use user-image path here
+  user-name: Thomas  # Use user name here
+  review-star: 5  # Use number upto 5 only
+  review-content: The first step in the process in replacing negatives with positives in your life is to make a decision to start looking for the negative messages and ways to replace them with positives.

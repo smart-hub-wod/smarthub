@@ -1,0 +1,79 @@
+{% assign i = include.laptop %}
+{% if i > 1 and i <= 6  %}
+{% else %}
+{% assign i = 3 %}
+{% endif %}
+{% assign j = 12 | divided_by: i %}
+{% assign k = "col-lg-" | append: j %}
+
+{% assign l = include.tablet %}
+{% if l > 1 and l <= 4  %}
+{% else %}
+{% assign l = 2 %}
+{% endif %}
+{% assign m = 12 | divided_by: l %}
+{% assign n = "col-md-" | append: m %}
+
+{% assign o = include.mobile %}
+{% if o > 1 and o <= 2  %}
+{% else %}
+{% assign o = 1 %}
+{% endif %}
+{% assign p = 12 | divided_by: o %}
+{% assign q = "col-sm-" | append: p %}
+
+{% if include.content-alignment !=null %}
+{% assign a = include.content-alignment %}
+{% endif %}
+
+{% if a == "left" %}
+{% assign b = "text-left" %}
+{% elsif a == "center" %}
+{% assign b = "text-center" %}
+{% elsif a == "right" %}
+{% assign b = "text-right" %}
+{% else %}
+{% assign b = "text-left" %}
+{% endif %}
+
+
+
+
+{% if include.tag != null %}
+<!-- info-block starts -->
+<div class="row info-block {{ include.class }} {{ b }}">
+  {% for details in site.data.st-info-block.st-info-block %}
+  {% if details.tags contains include.tag %}
+  <div class="{{ k }} {{ n }} {{ q }} info-block-column">
+    {% if details.icon != null %}
+    <!-- info  -->
+  <div class="info">{{ details.icon }}</div>
+    {% endif %}
+    {% if details.title != null %}
+    <!-- info-block title -->
+    <h4 class="title">{{ details.title }}</h4>
+    {% endif %}
+    {% if details.description != null %}
+    <!-- info-block description -->
+    <p class="description">{{ details.description }}</p>
+    {% endif %}
+  </div>
+{% endif %}
+{% endfor %}
+</div>
+<!-- info-block ends -->
+{% else %}
+<!-- error message -->
+{{ site.error-message }}
+{% endif %}
+{% assign i = "" %}
+{% assign j = "" %}
+{% assign k = "" %}
+{% assign l = "" %}
+{% assign m = "" %}
+{% assign n = "" %}
+{% assign o = "" %}
+{% assign p = "" %}
+{% assign q = "" %}
+{% assign a = "" %}
+{% assign b = "" %}

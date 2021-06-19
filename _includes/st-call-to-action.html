@@ -1,0 +1,48 @@
+{% if include.tag !=null %}
+{% if include.button-alignment !=null %}
+{% assign i = include.button-alignment %}
+{% endif %}
+
+{% if i == "right" %}
+{% assign j = "d-lg-flex " %}
+{% elsif i == "bottom" %}
+{% assign k = "mt-lg-4 " %}
+{% assign j = "text-center" %}
+{% else %}
+{% assign j = "d-lg-flex " %}
+{% endif %}
+
+<!-- call-to-action starts -->
+{% for level1 in site.data.st-call-to-action.call-to-action %}
+{% if level1.tag == include.tag %}
+<div class="st-call-to-action {{ j }} {{ include.class }}">
+  <div class="st-call-to-action-content align-self-md-center">
+    {% if level1.title != null %}
+    <!-- call-to-action title -->
+    <h3>{{ level1.title }}</h3>
+    {% endif %}
+    {% if level1.description != null %}
+    <!-- call-to-action description -->
+    <p>{{ level1.description }}</p>
+    {% endif %}
+  </div>
+  {% for level2 in level1.button %}
+  {% if level2.name != null %}
+  <!-- call-to-action button -->
+    <div class="st-call-to-action-bg-button align-self-md-center bg-button {{ k }}">
+      <a href="{{ level2.href }}" class="btn" role="button">{{ level2.name }}</a>
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>
+{% endif %}
+{% endfor %}
+<!-- call-to-action ends -->
+{% else %}
+<!-- error message -->
+{{ site.error-message }}
+{% endif %}
+
+{% assign j = "" %}
+{% assign i = "" %}
+{% assign k = "" %}

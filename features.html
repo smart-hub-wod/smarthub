@@ -1,0 +1,77 @@
+---
+layout: default
+title: Features
+---
+{% include st-page-banner.html %}
+
+<section class="st-features-section">
+  <div class="container">
+    <h1 class="text-center mb-5">Call To Action</h1>
+    <h2 class="text-center mb-3">Call To Action - Button Aligned Bottom</h2>
+    {% include st-call-to-action.html tag="features" button-alignment="bottom" %}
+
+    <h2 class="text-center mb-3">Call To Action - Button Aligned Right</h2>
+    {% include st-call-to-action.html tag="features" button-alignment="right" %}
+  </div>
+</section>
+
+<section class="st-features-section blue-lighter-bg">
+  <div class="container">
+    <h2 class="text-center mb-5">Contact Form</h2>
+    {% include st-form.html %}
+  </div>
+</section>
+
+<section class="st-features-section">
+  <div class="container">
+    <h1 class="text-center mb-5">Hero Content</h1>
+    <h2 class="text-center mb-3">Hero Content -  desktop image right, mobile image top aligned</h2>
+    {% include st-hero-content.html tag="home-1" layout="image-right" mobile-image-order="top" vertical-alignment="top" %}
+
+    <h2 class="text-center mb-3">Hero Content -  desktop image left, mobile image bottom aligned</h2>
+    {% include st-hero-content.html tag="home-2" layout="image-left" mobile-image-order="bottom" vertical-alignment="top" %}
+  </div>
+</section>
+
+<section class="st-features-section blue-lighter-bg">
+  <div class="container">
+    <h2 class="text-center mb-5">Info Block</h2>
+    {% include st-info-block.html tag="home-1" %}
+  </div>
+</section>
+
+<section class="st-features-section">
+  <div class="container">
+    <h2 class="text-center mb-5">Review Carousel</h2>
+    {% include st-review-carousel.html %}
+  </div>
+</section>
+
+<section class="st-features-section blue-lighter-bg">
+  <div class="container">
+    <h2 class="text-center mb-5">Shop Archive Image</h2>
+    {% include st-shop-image-archive.html %}
+  </div>
+</section>
+
+<section class="st-features-section">
+  {% include st-three-blog.html %}
+</section>
+
+<section class="st-features-section blue-lighter-bg">
+  <div class="container">
+    {% include st-login.html %}
+  </div>
+</section>
+
+<section class="st-features-section">
+  <div class="container">
+    {% include st-signup.html %}
+  </div>
+</section>
+
+<section class="st-features-section blue-lighter-bg">
+  <div class="container">
+    {% include st-forgot-password.html %}
+  </div>
+</section>

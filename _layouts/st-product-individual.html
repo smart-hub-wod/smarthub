@@ -1,0 +1,371 @@
+{% include st-head.html %}
+
+<body>
+  {% include st-header.html %}
+
+  <section class="product-banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <div class="banner-title">
+            <h1>{{ page.title }}</h1>
+            <div class="review-and-buy ">
+              <div class="rating">
+                <span>AVERAGE RATING</span>
+                {% assign num = page.rating %}
+                {% if num > 0 and num <= 5 %} {% for i in (1..num) %} <!-- rating icon -->
+                  <i class="fas fa-star"></i>
+                  {% endfor %}
+                  {% assign num1 = 5 | minus: page.rating %}
+                  {% if num1 > 0 and num1 <= 5 %} {% for i in (1..num1) %} <!-- rating icon -->
+                    <i class="far fa-star"></i>
+                    {% endfor %}
+                    {% endif %}
+
+                    {% else %}
+                    {% for i in (1..5) %}
+                    <!-- rating icon -->
+                    <i class="far fa-star"></i>
+                    {% endfor %}
+                    {% endif %}
+              </div>
+              <div class="buy-button">
+                <a href="/checkout/" class="btn" role="button">Quick Buy {{ page.quick-buy-price }}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+
+    <div class="banner" style="background-image: url({{ page.image }});"></div>
+  </section>
+
+  <section class="product-individual-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 content-order">
+          <div class="featured-image">
+            <div class="row related-image">
+              {% if page.image != null %}
+              <div class="col-12 mb-3">
+                <a class="fancybox" rel="gallery" href="{{ page.image }}">
+                  <img src="{{ page.image }}" class="img-fluid" alt="{{ page.title }}"></a>
+              </div>
+              {% if page.additional-images != null %}
+              {% for images in page.additional-images limit: 4 %}
+              <div class="col-3 products-spacing">
+                <a class="fancybox" rel="gallery" href="{{ images }}">
+                  <div class="single-image" style="background-image: url('{{ images }}');"></div>
+                </a>
+              </div>
+              {% endfor %}
+              {% endif %}
+              {% else %}
+              <div class="col-12">
+                <div class="embed-responsive embed-responsive-16by9">
+                  {{ page.iframe }}
+                </div>
+              </div>
+              {% endif %}
+
+            </div>
+          </div>
+          <div class="row author">
+            <div class="col-6">
+              <div class="author-details">
+                <div class="author-image">
+                  <img src="{{ page.author-image }}" alt="{{ page.title }}">
+                </div>
+                <div class="author-description">
+                  <div class="page-title">
+                    <strong>{{ page.title }}</strong>
+                  </div>
+                  <div class="author-name">
+                    <span>by {{ page.author }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <a href="#" class="btn author-more" role="button">More from {{ page.author }}</a>
+            </div>
+          </div>
+          <div class="related-post d-none d-md-block">
+            <h5>Related Products</h5>
+            <div class="row">
+              {% for post in site.tags.Products limit: 4 %}
+              <div class="col-3 products-spacing">
+                <a href="{{ post.url }}">
+                  <div class="single-post" style="background-image: url({{ post.image }});"></div>
+                </a>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-6 px-md-5">
+          <div class="post-content">
+            <p class="h3 mb-2">{{ page.title }}</p>
+            {{ content }}
+          </div>
+
+          <div class="product_pricing">
+            <ul class="list-unstyled">
+              {% for price-option in page.price-option %}
+              <li>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                  <label class="form-check-label" for="exampleRadios1">
+                    <span>{{ price-option.price-option-name }} - </span><span>{{ price-option.price-opton-price }}</span>
+                  </label>
+                </div>
+              </li>
+              {% endfor %}
+              <li>
+                <div class="row post-button">
+                  <div class="col-6">
+                    <a href="/checkout/" class="btn wishlist-button" role="button">Buy Now</a>
+                  </div>
+                  <div class="col-6">
+                    <a href="/checkout/" class="btn add-to-cart-button" role="button">Add to Cart</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6 my-3 p-0">
+              <div class="wishlist">
+                <div class="st-modal">
+                  <div class="bg-button">
+                    <a href="#" class="btn" role="button" data-toggle="modal" data-target=".modal-wishlist"><span><i class="fas fa-heart"></i> Add to wishlist</span></a>
+                  </div>
+                  <div class="modal fade modal-wishlist" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content text-left">
+                        <div class="">
+                          <div class="modal-header">
+                            <h1>Add to wishlist</h1>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+
+                          </div>
+                          <h4 class="modal-product-title">{{ page.title }}</h4>
+                        </div>
+
+                        <div class="modal-content-section">
+                          <form class="">
+                            <div class="form-check mb-4">
+                              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4" checked>
+                              <label class="form-check-label" for="exampleRadios4">
+                                Add to New
+                              </label>
+                                <input class="form-control" type="text" placeholder="Title">
+                            </div>
+
+                            <div class="form-check mb-4">
+                              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5">
+                              <label class="form-check-label" for="exampleRadios5">
+                                Add to Existing
+                              </label>
+                              <select class="form-control">
+                                <option>Sample</option>
+                              </select>
+                            </div>
+
+                            <div class=""><a href="#" class="btn modal-button">Save</a></div>
+
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                <div class="wishlist-text"><a href="/wishlist/"> Go to wishlist</a></div>
+              </div>
+            </div>
+            <div class="col-sm-6 my-3">
+              <div class="product-share">
+                <span><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></span><span><a href="#" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a></span><span><a href="#" title="Linkedin"><i class="fab fa-linkedin-in"
+                      aria-hidden="true"></i></a></span><span><a href="#" title="Pinterest"><i class="fab fa-pinterest-p"></i></a></span>
+              </div>
+              <div class="product-share-text">Share</div>
+            </div>
+          </div>
+
+          <div class="product-meta">
+            <p class="product-meta-title">#Exif Data</p>
+            <div class="row">
+              <div class="col-6">
+                {% if page.aperture != null %}
+                <p><strong>Aperture</strong></p>
+                {% endif %}
+                {% if page.credit != null %}
+                <p><strong>Credit</strong></p>
+                {% endif %}
+                {% if page.copyright != null %}
+                <p><strong>Copyright</strong></p>
+                {% endif %}
+                {% if page.camera != null %}
+                <p><strong>Camera</strong></p>
+                {% endif %}
+                {% if page.created != null %}
+                <p><strong>created</strong></p>
+                {% endif %}
+                {% if page.focal-length != null %}
+                <p><strong>focal-length</strong></p>
+                {% endif %}
+                {% if page.iso != null %}
+                <p><strong>iso</strong></p>
+                {% endif %}
+                {% if page.shutter-speed != null %}
+                <p><strong>shutter-speed</strong></p>
+                {% endif %}
+                {% if page.orientation != null %}
+                <p><strong>orientation</strong></p>
+                {% endif %}
+              </div>
+              <div class="col-6">
+                {% if page.aperture != null %}
+                <p>{{ page.aperture }}</p>
+                {% endif %}
+                {% if page.credit != null %}
+                <p>{{ page.credit }}</p>
+                {% endif %}
+                {% if page.copyright != null %}
+                <p>{{ page.copyright }}</p>
+                {% endif %}
+                {% if page.camera != null %}
+                <p>{{ page.camera }}</p>
+                {% endif %}
+                {% if page.created != null %}
+                <p>{{ page.created }}</p>
+                {% endif %}
+                {% if page.focal-length != null %}
+                <p>{{ page.focal-length }}</p>
+                {% endif %}
+                {% if page.iso != null %}
+                <p>{{ page.iso }}</p>
+                {% endif %}
+                {% if page.shutter-speed != null %}
+                <p>{{ page.shutter-speed }}</p>
+                {% endif %}
+                {% if page.orientation != null %}
+                <p>{{ page.orientation }}</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+
+          <!-- product-meta ends -->
+          <div class="row product-meta">
+            <div class="col-6">
+              <!-- product-categories starts -->
+              <div class="product-categories">
+                <p>#Categories</p>
+                <a href="/category/{{ page.categories }}/">{{ page.categories }}</a>
+              </div>
+              <!-- product-categories ends -->
+            </div>
+            <div class="col-6">
+              <!-- product-categories starts -->
+              <div class="product-tags">
+                <p>#Tags</p>
+                <a href="/tag/{{ page.tags }}/">{{ page.tags }}</a>
+              </div>
+              <!-- product-categories ends -->
+            </div>
+          </div>
+          <div class="related-post d-md-none">
+            <h5>Related Products</h5>
+            <div class="row">
+              {% for post in site.tags.Products limit: 4 %}
+              <div class="col-3 products-spacing">
+                <a href="{{ post.url }}">
+                  <div class="single-post" style="background-image: url({{ post.image }});"></div>
+                </a>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="product-individual-review">
+    <div class="container">
+      <hr>
+      <div class="row py-4">
+        <div class="col-md-4">
+          <h3><strong>Reviews</strong> from <br>
+            our lovely customers</h3>
+          <div class="row review-button">
+            <div class="col-6">
+              <a href="#" class="btn write-review-button" role="button">Write Review</a>
+            </div>
+            <div class="col-6">
+              <a href="/checkout/" class="btn buy-button" role="button">Quick Buy {{ page.quick-buy-price }}</a>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-8">
+          {% include st-review-carousel.html %}
+        </div>
+      </div>
+      <hr>
+      <div class="row py-4">
+        <div class="col-md-4">
+          <h3>Something on your mind? <br>
+            Post your <strong>Comments</strong></h3>
+          <div class="row">
+            <div class="col-6">
+              <a href="#" class="btn comment-register-button" role="button">Register</a>
+            </div>
+            <div class="col-6"></div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="title-line text-center">
+            <h2 class="st-title px-3">1 Comments</h2>
+          </div>
+          <div class="comments-wrap">
+            <div class="single-comment">
+              <img class="img-fluid" src="/assets/images/stocky/img3.jpg" alt="author">
+              <div class="comments">
+                <div class="comment-author">
+                  <p><strong>Demo Vendor</strong><span> says</span></p>
+                </div>
+                <div class="comment-text">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="comment-metadata">
+                  <p> <a href="#"><i class="fas fa-reply mr-1"></i></a> <i class="far fa-clock"></i> June 27, 2015 - 6:00 am</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- footer -->
+  {% include st-footer.html %}
+  <!-- footer-script -->
+  {% include st-footer-script.html %}

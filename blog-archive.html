@@ -1,0 +1,50 @@
+---
+layout: st-layout
+title: Blog Archive
+pagination:
+  enabled: true
+  per_page: 10
+  category:
+  tags: blog
+  trail:
+    before: 1 # The number of links before the current page
+    after: 1  # The number of links after the current page
+---
+
+<div class="blog-archive">
+  <div class="row">
+{% for post in paginator.posts %}
+{% if forloop.first %}
+<div class="col-12 single-blog">
+<div class="row">
+  <div class="col-md-4 mb-4">
+    <a href="{{ post.url }}">
+    <div class="blog-image" style="background: #ccc url('{{ post.image }}') center/cover no-repeat;">
+    </div>
+    </a>
+  </div>
+  <div class="col-md-8 mb-4 blog-content">
+    <h4>{{ post.title }}</h4>
+    <p>by <span class="tet-italic">{{ post.author }}</span> in <a href="/blog-archive/">{{ post.tags }}</a>. {{ post.date | date:  "%b %d, %Y" }}</p>
+    <!-- <div class="d-none d-md-block">
+      {{ post.content | truncate: 350 }}
+    </div> -->
+    <a href="{{ post.url }}" class="btn d-none d-md-block">Continue Reading</a>
+  </div>
+ </div>
+</div>
+{% else %}
+  <div class="col-md-4 single-blog">
+    <a href="{{post.url}}">
+    <div class="blog-image" style="background: linear-gradient(to top, #78bcef, transparent 30%), #ccc url('{{ post.image }}') center/cover no-repeat;">
+      <h4 class="text-white px-2 mb-3">{{ post.title }}</h4>
+    </div>
+    </a>
+  </div>
+
+{% endif %}
+{% endfor %}
+</div>
+<div class="more d-md-none">Load More Blog</div>
+{% include st-pagination.html %}
+</div>

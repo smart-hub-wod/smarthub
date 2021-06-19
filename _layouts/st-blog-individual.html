@@ -1,0 +1,51 @@
+  {% include st-head.html %}
+<!-- body section starts -->
+
+<body>
+  <!-- header  -->
+  {% include st-header.html %}
+
+  {% include st-page-banner.html class="blog-single" %}
+
+  <!-- content -->
+  <section class="st-section post-content-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mb-4 content-order">
+          <!-- <div class="title-line">
+            <h2 class="st-title">{{page.title}}</h2>
+          </div> -->
+          <a href="{{page.image}}" class="fancybox">
+            {% if page.image != null %}
+          <div class="post-image" style="background-image: url('{{page.image}}')">
+          </div>
+            {% endif %}
+          </a>
+            {{content}}
+            <!-- post details starts -->
+             <div class="post-meta">
+               {% if page.categories != null %}
+               <span><strong>Categories:</strong> <a class="text-capitalize" href="/blog-archive/">{{ page.categories }}</a></span>
+               {% endif %}
+               {% if page.author != null %}
+               <span><strong>Author:</strong> {{ page.author }}</span>
+               {% endif %}
+               {% if page.tags != null %}
+               <span><strong>Tag:</strong> <a href="/blog-archive/">{{ page.tags }}</a></span>
+               {% endif %}
+               {% if page.date != null %}
+               <span><strong>Date:</strong> {{ page.date | date: "%b %d, %y" }}</span>
+               {% endif %}
+             </div>
+             <!-- post details ends -->
+        </div>
+        <div class="col-md-4">
+          {% include st-sidewidget.html %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- footer -->
+  {% include st-footer.html %}
+  <!-- footer-script -->
+  {% include st-footer-script.html %}

@@ -1,0 +1,26 @@
+{% include st-head.html %}
+<!-- body section starts -->
+
+<body>
+  <!-- header  -->
+  {% include st-header.html %}
+
+  {% include st-page-banner.html %}
+
+  <!-- content -->
+  <section class="st-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mb-4 content-order">
+          {{content}}
+        </div>
+        <div class="col-md-4">
+          {% include st-sidewidget.html %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- footer -->
+  {% include st-footer.html %}
+  <!-- footer-script -->
+  {% include st-footer-script.html %}

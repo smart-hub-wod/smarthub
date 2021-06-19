@@ -1,0 +1,95 @@
+---
+layout: full-width
+title: Checkout
+---
+<div class="title-line">
+  <h2 class="st-title">Checkout</h2>
+</div>
+<div class="st-checkout">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Item Name</th>
+        <th>Item Price</th>
+        <th class="text-right">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div><img width="25" height="25" src="/assets/images/products/bart.jpg" alt="product-image"></div><span>Romantic Air Balloon</span>
+        </td>
+        <td>$50.00</td>
+        <td class="text-right"><a href="#">Remove</a></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr class="d-none">
+        <th colspan="3"></th>
+      </tr>
+      <tr>
+        <th colspan="3" class="text-right">Total: <span>$50.00</span></th>
+      </tr>
+    </tfoot>
+  </table>
+
+  <p class="discount-code">Have a discount code? <a href="#">Click to enter it</a></p>
+
+  <div class="payment-icons">
+    <img src="/assets/images/stocky/americanexpress.png" alt="americanexpress">
+    <img src="/assets/images/stocky/discover.png" alt="discover">
+    <img src="/assets/images/stocky/mastercard.png" alt="mastercard">
+    <img src="/assets/images/stocky/paypal.png" alt="paypal">
+    <img src="/assets/images/stocky/visa.png" alt="visa">
+  </div>
+
+  <fieldset>
+    <legend>Select Payment Method</legend>
+    <div class="radio-text">
+      <input type="radio" name="payment-mode" value="Paypal">
+      <label class="mr-3"><strong>Paypal</strong></label>
+    </div>
+
+    <div class="radio-text">
+      <input type="radio" name="payment-mode" value="Test Payment">
+      <label><strong>Test Payment</strong></label>
+    </div>
+
+  </fieldset>
+
+  <fieldset>
+    <legend>Personal info</legend>
+
+    <form method="post">
+      <!-- email input field starts -->
+      <div class="input form-group">
+        <label>Email Address <span>*</span></label>
+        <span class="d-block">We will send the purchase receipt to this address.</span>
+        <input type="email" name="Email" class="form-control" placeholder="Email address" required>
+      </div>
+      <!-- email input field ends -->
+
+      <!-- first-name input field starts -->
+      <div class="input form-group">
+        <label>First Name <span>*</span></label>
+        <span class="d-block">We will use this to personalize your account experience.</span>
+        <input type="text" name="First Name" class="form-control" placeholder="First Name" required>
+      </div>
+      <!-- first-name input field ends -->
+
+      <!-- last-name input field starts -->
+      <div class="input form-group">
+        <label>Last Name <span>*</span></label>
+        <span class="d-block">We will use this as well to personalize your account experience.</span>
+        <input type="text" name="Last Name" class="form-control" placeholder="Last Name" required>
+      </div>
+      <!-- last-name input field ends -->
+
+      <p class="cart_total"><strong>Purchase Total: </strong><span>$50.00</span></p>
+      <!-- form button -->
+      <input type="submit" class="btn form-button" name="purchase" value="Purchase">
+
+    </form>
+  </fieldset>
+
+</div>

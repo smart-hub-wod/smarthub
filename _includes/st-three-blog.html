@@ -1,0 +1,25 @@
+<div class="st-three-blog">
+  <div class="container-fluid">
+    <div class="row">
+      {% for post in site.tags.blog limit:3 %}
+      {% if forloop.first %}
+      <div class="col-md-4 p-0">
+        {% else %}
+        <div class="col-md-4 d-none d-md-flex p-0">
+          {% endif %}
+          <a href="{{post.url}}">
+          <div class="post-image" style="background-image: url('{{post.image}}');">
+          <p class="small">{{ post.date | date:  "%b %d, %Y" }}</p>
+          <h3>{{post.title}}</h3>
+          <div class="line"></div>
+          {{post.content | truncate:100}}
+        </div>
+      </a>
+      </div>
+        {% endfor %}
+      </div>
+      <div class="more-blog text-center d-md-none">
+        <a href="/blog-archive/" class="btn">View more blog</a>
+      </div>
+    </div>
+</div>

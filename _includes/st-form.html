@@ -1,0 +1,47 @@
+<!-- form section starts -->
+<div class="form {{ include.class }}">
+  <form method="post">
+      <!-- name input field starts -->
+      <div class="row">
+        <div class="input form-group col-md-6">
+          <label>First Name <span>*</span></label>
+          <input type="text" name="Name" class="form-control" required>
+        </div>
+        <!-- name input field ends -->
+
+        <!-- name input field starts -->
+        <div class="input form-group col-md-6">
+          <label>Last Name <span>*</span></label>
+          <input type="text" name="Name" class="form-control" required>
+        </div>
+        <!-- name input field ends -->
+      </div>
+
+      <div class="row">
+        <!-- email input field starts -->
+        <div class="input form-group col-md-6">
+          <label>Email <span>*</span></label>
+          <input type="email" name="Email" class="form-control" required>
+        </div>
+        <!-- email input field ends -->
+
+        <!-- phone input field starts -->
+        <div class="input form-group col-md-6">
+          <label>Phone Number <span>*</span></label>
+          <input type="tel" name="Phone" class="form-control" required>
+        </div>
+        <!-- phone input field ends -->
+      </div>
+
+    <!-- textarea starts -->
+    <div class="form-group">
+      <label>Message</label>
+      <textarea class="form-control form-bottom" rows="5" name="Message"></textarea>
+    </div>
+    <!-- textarea ends -->
+
+    <!-- form button  -->
+    <input type="submit" value="Send" class="btn form-button">
+  </form>
+</div>
+<!-- form section ends -->

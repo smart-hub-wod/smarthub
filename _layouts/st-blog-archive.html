@@ -1,0 +1,48 @@
+{% include st-head.html %}
+<!-- body section starts -->
+<body>
+  <!-- header  -->
+  {% include st-header.html %}
+
+  {% include st-page-banner.html %}
+
+  <!-- content -->
+  <section class="st-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mb-4 content-order">
+          <div class="blog-image-section">
+          <div class="card-columns">
+            {% for post in page.posts %}
+            {% if post.image != null %}
+            <div class="blog-details">
+              <a href="{{ post.url }}">
+                <div class="card m-0">
+                  <img class="img-fluid" src="{{ post.image }}" alt="{{ post.title }}">
+                </div>
+              </a>
+              <div class="hover-block">
+                <div class="stocky-hover-lines">
+                  <a href="{{post.url}}" class="btn">Details</a>
+                  <a href="/wishlist/"><i class="fas fa-heart"></i> Add to wishlist</a>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            <div class="more d-md-none">Load more photos</div>
+          </div>
+          </div>
+
+        </div>
+        <div class="col-md-4">
+          {% include st-sidewidget.html %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  {% include st-footer.html %}
+  <!-- footer-script -->
+  {% include st-footer-script.html %}

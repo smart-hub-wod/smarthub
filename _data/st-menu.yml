@@ -1,0 +1,51 @@
+menu:
+- title: Home  # Use header title here
+  href: /  # Use header title url here
+- title: Pages  # Use header title here
+  href: "#"  # Use header title url here
+  option:
+    - title: Full width
+      href: /full-width/
+    - title: Typography
+      href: /typography/
+    - title: 404 Error Page
+      href: /404/
+    - title: Features
+      href: /features/
+    - title: Search + Results
+      href: /search-result/
+- title: Store  # Use header title here
+  href:  "#"  # Use header title url here
+  option:
+    - title: Shop - archive
+      href: /shop-archive/
+    - title: Shop - single
+      href: /travel/
+    - title: Checkout
+      href: /checkout/
+    - title: Wishlist
+      href: /wishlist/
+    - title: Forgot Password
+      href: /forgot-password/
+- title: blog  # Use header title here
+  href: "#"  # Use header title url here
+  option:
+    - title: Blog - archive
+      href: /blog-archive/
+    - title: Blog - single
+      href: /travel-1/
+- title: Member  # Use header title here
+  href: "#"  # Use header title url here
+  option:
+    - title: Login
+      href: /login/
+    - title: Signup
+      href: /signup/
+    - title: Checkout
+      href: /checkout/
+    - title: Wishlist
+      href: /wishlist/
+    - title: Forgot Password
+      href: /forgot-password/
+- title: Contact  # Use header title here
+  href: /contact/  # Use header title here

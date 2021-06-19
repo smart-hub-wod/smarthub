@@ -1,0 +1,9 @@
+language: ruby
+rvm:
+ - 2.6.7
+ - jruby
+
+deploy:
+  provider: firebase
+  token:
+    secure: "1//041Wncys2HH00CgYIARAAGAQSNwF-L9IrY0GDbGkwjfMy-xtPkcvS-K-RjbG5H8qvAwvZhMuAYQn6oNYInnY5zWEJ-kT8O6UClf4"

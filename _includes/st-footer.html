@@ -1,0 +1,165 @@
+{% assign i = site.laptop %}
+{% if i > 1 and i <= 6  %}
+{% else %}
+{% assign i = 3 %}
+{% endif %}
+{% assign j = 12 | divided_by: i %}
+{% assign k = "col-lg-" | append: j %}
+
+{% assign l = site.tablet %}
+{% if l > 1 and l <= 4  %}
+{% else %}
+{% assign l = 2 %}
+{% endif %}
+{% assign m = 12 | divided_by: l %}
+{% assign n = "col-md-" | append: m %}
+
+{% assign o = site.mobile %}
+{% if o > 1 and o <= 2  %}
+{% else %}
+{% assign o = 1 %}
+{% endif %}
+{% assign p = 12 | divided_by: o %}
+{% assign q = "col-sm-" | append: p %}
+{% assign r = "col-" | append: p %}
+
+{% assign s = site.copyright-text %}
+{% assign t = site.copyright-logo %}
+
+<!-- footer widget starts -->
+<footer class="footer-widget">
+  <div class="container">
+      <div class="row d-none d-md-flex">
+        {% for level1 in site.data.st-footer.footer %}
+        <!-- footer widget column starts -->
+        <div class="{{ k }} {{ n }} {{ q }} {{ r }} footer-widget-column">
+          {% if level1.title !=null %}
+          <!-- footer column title -->
+          <h4 class="footer-heading">{{ level1.title }}</h4>
+          {% endif %}
+          <ul class="list-unstyled">
+            {% for level2 in level1.option %}
+            <li>
+              {% if level2.icon == null %}
+              {% if level2.href == null %}
+              <!-- description without icon -->
+              <p>{{ level2.title }}</p>
+              {% else %}
+              <!-- links without icon -->
+              <a href="{{ level2.href }}">{{ level2.title }}</a>
+              {% endif %}
+              {% else %}
+              {% if level2.href == null %}
+              <!-- description with icon -->
+              <p><span class="mr-2">{{ level2.icon }}</span><span>{{ level2.title }}</span></p>
+              {% else %}
+              <!-- links with icon -->
+              <a href="{{ level2.href }}"><span class="mr-2">{{ level2.icon }}</span> {{ level2.title }}</a>
+              {% endif %}
+              {% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <!-- footer widget column ends -->
+        {% if forloop.index == i %}
+        {% break %}
+        {% endif %}
+        {% endfor %}
+      </div>
+
+      <!-- responsive footer starts -->
+      <div class="row d-md-none mb-4">
+        {% for level1 in site.data.st-footer.footer %}
+        {% if forloop.first == false %}
+        <div class="col-12">
+          <ul class="list-unstyled m-0">
+            {% if level1.title !=null %}
+            <li class="dropdown">
+              <a style="position:absolute; right:0; top: 50%;" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"></a>
+              <a class="nav-link" data-toggle="dropdown" href="{{ site.url }}{{ level1.href }}">{{ level1.title }}</a>
+              <ul class="dropdown-menu">
+                {% for level2 in level1.option %}
+                    <li>{% if level2.icon == null %}
+                    {% if level2.href == null %}
+                    <!-- description without icon -->
+                    <p>{{ level2.title }}</p>
+                    {% else %}
+                    <!-- links without icon -->
+                    <a href="{{ level2.href }}">{{ level2.title }}</a>
+                    {% endif %}
+                    {% else %}
+                    {% if level2.href == null %}
+                    <!-- description with icon -->
+                    <p><span class="mr-2">{{ level2.icon }}</span><span>{{ level2.title }}</span></p>
+                    {% else %}
+                    <!-- links with icon -->
+                    <a href="{{ level2.href }}"><span class="mr-2">{{ level2.icon }}</span> {{ level2.title }}</a>
+                    {% endif %}
+                    {% endif %}
+                  </li>
+                    {% endfor %}
+                  </ul>
+                  </li>
+                  {% endif %}
+                  </ul>
+        </div>
+        {% endif %}
+        {% endfor %}
+      <!-- responsive footer ends -->
+    </div>
+
+    <div class="text-center d-md-none">
+      {% for level1 in site.data.st-footer.footer %}
+      <div class="social-icon-section">
+        {% if level1.title !=null %}
+        <!-- footer column title -->
+        <h4 class="footer-heading">{{ level1.title }}</h4>
+        {% endif %}
+        <ul class="list-unstyled">
+          {% for level2 in level1.option %}
+          <li>
+            {% if level2.icon == null %}
+            {% if level2.href == null %}
+            <!-- description without icon -->
+            <p>{{ level2.title }}</p>
+            {% else %}
+            <!-- links without icon -->
+            <a href="{{ level2.href }}">{{ level2.title }}</a>
+            {% endif %}
+            {% else %}
+            {% if level2.href == null %}
+            <!-- description with icon -->
+            <p><span class="mr-2">{{ level2.icon }}</span><span>{{ level2.title }}</span></p>
+            {% else %}
+            <!-- links with icon -->
+            <a href="{{ level2.href }}"><span class="mr-2">{{ level2.icon }}</span> {{ level2.title }}</a>
+            {% endif %}
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% if forloop.index == 1 %}
+      {% break %}
+      {% endif %}
+      {% endfor %}
+    </div>
+
+</footer>
+<!-- footer widgets ends -->
+{% assign i = "" %}
+{% assign j = "" %}
+{% assign k = "" %}
+{% assign l = "" %}
+{% assign m = "" %}
+{% assign n = "" %}
+{% assign o = "" %}
+{% assign p = "" %}
+{% assign q = "" %}
+{% assign r = "" %}
+{% assign s = "" %}
+{% assign t = "" %}
+
+<!-- scroll top button -->
+<a href="#" class="btn scroll-top"><i class="fa fa-chevron-up"></i></a>

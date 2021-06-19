@@ -1,0 +1,73 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+# Website Basic Information & Settings
+title: Stocky jekyll template
+description: >-  # this means to ignore newlines until "baseurl:"
+  Stocky jekyll template
+baseurl: ""  # the subpath of your site(optional), e.g. /blog
+url: ""  # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
+permalink: /:title/
+
+# Logo & Favicon Settings
+logo: /assets/images/stocky/stocky-logo.png  # Use logo icon here
+logo-width: 150px  # Use logo width here (default 150px)
+favicon: /assets/images/stocky/favicon.png  # Use favicon here
+
+# Footer-columns
+laptop: 4  # Use Options 1,2,3,4,6  Default: 3
+tablet: 2  # Use Options 1,2,3,4 Default: 2
+mobile: 1  # Use Options 1,2 Default: 1
+
+# Error Message
+error-message: use tag or id as include variable <br>  # Use error message for tags
+
+# Pagination Settings
+pagination:
+  enabled: true  # Use options true or false
+  per_page: 6  # Use number of post per page
+  permalink: '/page/:num/'  # Use pagination permalink here
+  title: 'Page :num'  # Use pagination title  here
+  limit: 0  # Use pagination limit here
+  sort_field: 'date'  # Use  sort_field options here
+  sort_reverse: true  # Use options true or false
+
+
+#Archive settings
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: st-blog-archive
+  permalinks:
+    category: '/category/:name/'
+    tag: '/tag/:name/'
+
+# Build Settings
+markdown: kramdown
+
+kramdown:
+  coderay_default_lang: html
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate-v2
+
+# SASS Settings
+sass:
+  style: compressed

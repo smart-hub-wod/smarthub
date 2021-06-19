@@ -1,0 +1,73 @@
+<!-- logo-carousel starts -->
+<div class="logo-carousel {{ include.class }}">
+   <div class="user-reviews slider">
+     {% for level1 in site.data.st-review-carousel.st-review-carousel %}
+     <div class=" px-2">
+     <div class="user-rating">
+       <div class="avatar">
+         <img src="{{ level1.user-image }}" alt="{{ level1.user-image }}">
+         <p class="user-name">{{ level1.user-name }}</p>
+       </div>
+       <div class="user">
+         <p class="user-name">{{ level1.user-name }}</p>
+         <p class="rating">
+           {% assign num = {{level1.review-star}} %}
+           {% if num > 0 and num <= 5  %}
+           {% for i in (1..num) %}
+           <!-- rating icon -->
+           <i class="fas fa-star"></i>
+           {% endfor %}
+           {% assign num1 = 5 | minus: {{level1.review-star}} %}
+           {% if num1 > 0 and num1 <= 5  %}
+           {% for i in (1..num1) %}
+           <!-- rating icon -->
+           <i class="far fa-star"></i>
+           {% endfor %}
+           {% endif %}
+           {% else %}
+           {% for i in (1..5) %}
+           <!-- rating icon -->
+           <i class="far fa-star"></i>
+           {% endfor %}
+           {% endif %}
+         </p>
+       </div>
+     </div>
+     {{ level1.review-content }}
+
+     </div>
+     {% endfor %}
+   </div>
+</div>
+
+<!-- logo carousel script -->
+<script>
+  $(document).ready(function(){
+    $('.user-reviews').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: true,
+        responsive: [{
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 2
+            }
+        },{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 1
+            }
+        }]
+    });
+});
+</script>
+<!-- error message -->

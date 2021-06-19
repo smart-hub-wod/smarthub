@@ -1,0 +1,49 @@
+---
+layout: full-width
+title: Wishlist
+---
+
+<section class="py-5">
+  <div class="container">
+    <div class="title-line">
+      <h2 class="st-title">Sample</h2>
+    </div>
+    <div class="wishlist-product">
+      <ul class="list-unstyled">
+        {% for post in site.tags.Products limit:3 %}
+        <li>
+          <div class="row" style="align-items: center;">
+            <div class="col-xl-2 col-md-12 product-name">
+              <a href="#">{{ post.title }}</a>
+              <div class="close-icon d-xl-none text-right">
+                <i class="fas fa-times"></i>
+              </div>
+            </div>
+            <div class="col-xl-2 col-md-6 col-sm-12">
+              {% for price-option in post.price-option limit:1 %}
+              <p class="price-option">{{ price-option.price-option-name }}</p>
+              {% endfor %}
+            </div>
+            <div class="col-xl-2 col-md-6 col-sm-12">
+              <img src="{{ post.image }}" style="width:50px; height:50px;" alt="">
+            </div>
+            <div class="col-xl-2 col-md-6 col-sm-12">
+              {% for price-option in post.price-option limit:1 %}
+              <p class="price-option">{{ price-option.price-opton-price }}</p>
+              {% endfor %}
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12">
+              <a href="/checkout/" class="btn">Add to Cart</a>
+            </div>
+            <div class="col-xl-1 col-md-6 col-sm-12 d-none d-xl-block">
+            <div class="close-icon">
+              <i class="fas fa-times"></i>
+            </div>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
