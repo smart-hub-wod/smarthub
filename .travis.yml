@@ -1,9 +1,13 @@
 language: ruby
 rvm:
  - 2.6.7
- - jruby
 
-deploy:
-  provider: firebase
-  token:
-    secure: "1//041Wncys2HH00CgYIARAAGAQSNwF-L9IrY0GDbGkwjfMy-xtPkcvS-K-RjbG5H8qvAwvZhMuAYQn6oNYInnY5zWEJ-kT8O6UClf4"
+notifications:
+  slack: smarthubwod:TQ3Qh1aOnqeddjujxZJo9vMs
+
+script:
+ - echo "Deploying!"
+install:
+ - npm install -g firebase-tools
+after_success:
+ - firebase deploy --token $FIREBASE_TOKEN
