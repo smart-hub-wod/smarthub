@@ -1,17 +1,17 @@
 st-info-block:
-- icon: <i class="fas fa-camera"></i>  # Use icon here
-  title: Reason \#1  # Use icon block title here
+- icon: <i class="fas fa-child"></i>  # Use icon here
+  title: Kid Friendly  # Use icon block title here
   description: Get immediate exposure with your first upload. Our Pulse algorithm will take your photo through Discover where it will be seen by thousands and you'll receive valuable feedback on day one.  # Use description for icon block
   tags: home-1  # Use info-block tag name here
 
-- icon: <i class="fas fa-address-card"></i>  # Use icon here
-  title: Reason \#2  # Use icon block title here
+- icon: <i class="fas fa-school"></i>  # Use icon here
+  title: Engaging Lessons  # Use icon block title here
   description: Present yourself as a professional. Get hired by displaying your services, create a Directory listing, showcase the workshops you're holding, and create Galleries to highlight your work.  # Use description for icon block
   tags: home-1  # Use info-block tag name here
 
-- icon: <i class="fas fa-chart-line"></i>  # Use icon here
-  title: Grow your brand  # Use icon block title here
-  description: Fun stuff # Use description for icon block
+- icon: <i class="fas fa-medal"></i>  # Use icon here
+  title: Certifications  # Use icon block title here
+  description: Present yourself as a professional. Get hired by displaying your services, create a Directory listing, showcase the workshops you're holding, and create Galleries to highlight your work. # Use description for icon block
   tags: home-1  # Use info-block tag name here
 
 - icon: <i class="fas fa-chart-line"></i>  # Use icon here

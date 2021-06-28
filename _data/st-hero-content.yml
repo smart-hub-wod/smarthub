@@ -1,24 +1,24 @@
 hero-content:
-- title: Welcome to Stocky  # Use hero-content title here
-  description: <p>I am Shovan, welcome to Stocky marketplace, where you could buy some of the photos I have taken over the years. I have resonable good size audience, I welcoem other photographer to register as a vendor and seel your phots on Stocky website.</p> <p>You can learn more about me on the about page. Gears used- Nikon D7000, iPhone X, Leika Lense.</p>  # Use hero-content description here
-  image: /assets/images/products/Photographer-2.jpg  # Use hero-content image path here
+- title: Kid-Friendly & Easy To Use  # Use hero-content title here
+  description: <p>Get started today and learn just how easy it is to get your child into STEM!</p>  # Use hero-content description here
+  image: /assets/images/stocky/engineer-icon.svg  # Use hero-content image path here
   image-link:  # Use hero-content image-link url here
-  signature-image: /assets/images/products/sign.jpg  # Use Signature image path here
+  # signature-image: /assets/images/products/sign.jpg  # Use Signature image path here
   button:
-    - button-name: Buy Stocky Theme # Use hero-content button name here
-      button-href: "http://go.scube.co/stocky" # Use hero-content url path here
+    - button-name: Sign Up Today! # Use hero-content button name here
+      button-href: "/signup/" # Use hero-content url path here
       icon-button-name: Learn more about me # Use hero-content icon-button name here
       icon-button-href: "/features/"  # Use hero-content icon-button-url path here
   tag: home-1  # Use hero-content tag here
 
-- title: City Collection  # Use hero-content title here
-  description: <p> New in, brand new collection with 52 cities around the world. The photos is a collection of photos in London, India, Africa, Japan, Dubai, China, New York, Los Angeles, Brazil and many more. </p> <p> The collection captures buildings, abstracts, culture and people. Good one to use as stock image for your blog or email newsletter.</p> <p> The special offer ends in three days, dont miss out. </p>  # Use hero-content description here
-  image: /assets/images/products/Collection.jpg  # Use hero-content image path here
-  image-link: "/travel/"  # Use hero-content image-link url here
-  signature-image:  # Use Signature image path here
-  button:
-    - button-name: Buy Stocky Theme # Use hero-content button name here
-      button-href: "http://go.scube.co/stocky" # Use hero-content url path here
-      icon-button-name: Learn more about me # Use hero-content icon-button name here
-      icon-button-href: "/travel/"  # Use hero-content icon-button-url path here
-  tag: home-2  # Use hero-content tag here
+# - title: City Collection  # Use hero-content title here
+#   description: <p> New in, brand new collection with 52 cities around the world. The photos is a collection of photos in London, India, Africa, Japan, Dubai, China, New York, Los Angeles, Brazil and many more. </p> <p> The collection captures buildings, abstracts, culture and people. Good one to use as stock image for your blog or email newsletter.</p> <p> The special offer ends in three days, dont miss out. </p>  # Use hero-content description here
+#   image: /assets/images/products/Collection.jpg  # Use hero-content image path here
+#   image-link: "/travel/"  # Use hero-content image-link url here
+#   signature-image:  # Use Signature image path here
+#   button:
+#     - button-name: Buy Stocky Theme # Use hero-content button name here
+#       button-href: "http://go.scube.co/stocky" # Use hero-content url path here
+#       icon-button-name: Learn more about me # Use hero-content icon-button name here
+#       icon-button-href: "/travel/"  # Use hero-content icon-button-url path here
+#   tag: home-2  # Use hero-content tag here

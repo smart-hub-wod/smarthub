@@ -7,7 +7,7 @@ footer:
     - title: <div class="footer-icon"><span><a href="#" title="Google-Plus"><i class="fab fa-google-plus-g"></i></a></span><span><a href="#" title="Tumblr"><i class="fab fa-tumblr"></i></a></span><span><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></span><span><a href="#" title="Flickr"><i class="fab fa-flickr"></i></a></span></div>  # Use footer option links name here
       href:   # Use footer option url here
       icon:   # Use footer option icons here
-    - title: <div class="copyright-text"><strong>© 2019 Stocky</strong> <br> <span>Built with Stocky Theme</span></div>  # Use footer option links name here
+    - title: <div class="copyright-text"><strong>© 2021 Smart Hub</strong> <br> <span>Built with Stocky Theme</span></div>  # Use footer option links name here
       href:   # Use footer option url here
       icon:  # Use footer option icons here
 - title: Our Company  # Use footer title here
