@@ -25,7 +25,7 @@ github_username:  jekyll
 permalink: /:title/
 
 # Logo & Favicon Settings
-logo: /assets/images/stocky/stocky-logo.png  # Use logo icon here
+logo: /assets/images/stocky/smarthub-logo.png  # Use logo icon here
 logo-width: 150px  # Use logo width here (default 150px)
 favicon: /assets/images/stocky/favicon.png  # Use favicon here
 
