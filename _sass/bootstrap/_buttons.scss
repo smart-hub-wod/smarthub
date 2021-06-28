@@ -4,9 +4,10 @@
 // Base styles
 //
 
-.btn {
+.btn { 
   display: inline-block;
   font-weight: $btn-font-weight;
+  background-color: #FE5C36 !important;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -18,6 +19,10 @@
   // Share hover and focus styles
   @include hover-focus {
     text-decoration: none;
+  }
+
+  @include hover {
+    background-color: #ca4527 !important;
   }
 
   &:focus,

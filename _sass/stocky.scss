@@ -16,7 +16,7 @@
 
 /* Font */
 html, body {
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif, "Open Sans";
 }
 
 /* General elements */
@@ -103,7 +103,7 @@ button:focus,
   padding: 15px;
   bottom: 15px;
   right: 15px;
-  background: rgba(0, 0, 0, .5);
+  background: #0B3F84;
   border-radius: 0;
 }
 
@@ -112,7 +112,7 @@ button:focus,
 }
 
 .scroll-top:hover {
-  background: rgba(0, 0, 0, .6);
+  background: #0B3F84;
 }
 
 .scroll-top i {
@@ -122,7 +122,7 @@ button:focus,
 /* Page Banner */
 
 .page-banner {
-  background-image: url("/assets/images/stocky/home-bg-img-1.jpg");
+  background-image: url("/assets/images/stocky/Shapes_3.gif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -253,7 +253,7 @@ ul.pager li a {
 /* Header Widgets Starts */
 
 .header .mainmenu .header-widget a {
-  color: #909090;
+  color: #bdbdbd;
   font-size: 12px;
 }
 
@@ -268,7 +268,7 @@ ul.pager li a {
 .header .mainmenu .header-widget .form-control {
   font-size: 12px;
   border: 0;
-  background-color: rgba(0,0,0,0.5);
+  background-color: #0B3F84;
 }
 
 .header .mainmenu .header-widget .input-group-append {
@@ -276,11 +276,11 @@ ul.pager li a {
 }
 
 .header .mainmenu .header-widget button {
-  background-color: rgba(0,0,0,0.5);
+  background-color: #0B3F84;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   border: 0;
-  color: #909090;
+  color: #bdbdbd;
   padding-right: 12px;
 }
 
@@ -315,7 +315,7 @@ ul.pager li a {
 }
 
 .header .mainmenu .mobile-header-widget a {
-  color: #909090;
+  color: #bdbdbd;
   font-size: 25px;
 }
 
@@ -343,7 +343,7 @@ ul.pager li a {
 /* Header Starts */
 
 .header {
-  background-color: rgba(0,0,0,0.5);
+  background-color: #0B3F84;
   z-index: 10;
   padding: 0;
 }
@@ -377,7 +377,7 @@ ul.pager li a {
 }
 
 .header .mainmenu {
-  background-color: rgba(0,0,0,0.5);
+  background-color: #0B3F84;
 }
 
 .header .mainmenu ul {
@@ -392,11 +392,18 @@ ul.pager li a {
   color: #d3d3d3;
   margin-left: 15px;
   margin-right: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .header .nav-link:hover,
 .header .navbar-expand-lg .navbar-nav .nav-link:hover {
-  color: #fff;
+  color: #ffffff;
+  /*font-weight: bold;
+  background-color: #09356e;
+  padding-right: 10px;
+  padding-left: 10px;*/
+  /* Hover Effect for Navbar */
 }
 
 .header .btn:focus,
@@ -412,7 +419,7 @@ ul.pager li a {
   border-radius: 0;
   padding: 0;
   margin: 0;
-  background-color: #111;
+  background-color: #0b3f84e3;
 }
 
 .dropdown-menu a {
@@ -447,7 +454,7 @@ ul.pager li a {
 }
 
 .st-hero-content .hero-title h2 {
-  color: #000;
+  color: #0B3F84;
   margin-bottom: 25px;
   font-weight: 700;
 }
@@ -621,7 +628,7 @@ background-color: var(--theme-primary-button-bg-hover-color);
 /* Home Page Search Section */
 
 .home-search-section {
-  background-image: url("/assets/images/stocky/home-bg-img-1.jpg");
+  background-image: url("/assets/images/stocky/Shapes_3.gif");
   background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat;
@@ -696,7 +703,7 @@ background-color: var(--theme-primary-button-bg-hover-color);
 /* Home Content Section */
 
 .home-content-section .container {
-  background-image: url("/assets/images/stocky/home-bg-img-2.png");
+  background-image: url("/assets/images/stocky/Shapes_3.gif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1670,7 +1677,7 @@ footer h4 {
 }
 
 .footer-widget {
-  background-color: #000;
+  background-color: #0B3F84;
   padding: 50px 0;
 }
 
@@ -1812,7 +1819,7 @@ footer .social-icon-section ul li strong {
   width: 0;
   position: absolute;
   pointer-events: none;
-  border-color: rgba(0, 0, 0, 0);
+  border-color: #0B3F84;
   border-bottom-color: #111;
   border-width: 10px;
 }

@@ -1,7 +1,5 @@
 menu:
-- title: Home  # Use header title here
-  href: /  # Use header title url here
-- title: Pages  # Use header title here
+- title: Courses  # Use header title here
   href: "#"  # Use header title url here
   option:
     - title: Full width

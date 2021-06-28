@@ -1,7 +1,15 @@
+# call-to-action:
+# - title: Join the Static Site Generator/SSG revoloution by geting our jekyll theme  # Use hero-content title here
+#   description:  # Use hero-content description here
+#   button:
+#     - name: Buy Now  # Use hero-content button name here
+#     - href: \#  # Use hero-content url path here
+#   tag: features  # Use hero-content tag here
+
 call-to-action:
-- title: Join the Static Site Generator/SSG revoloution by geting our jekyll theme  # Use hero-content title here
+- title: A platform for your child's educational needs.
   description:  # Use hero-content description here
   button:
-    - name: Buy Now  # Use hero-content button name here
-    - href: \#  # Use hero-content url path here
-  tag: features  # Use hero-content tag here
+    - name: Sign Up Today!  # Use hero-content button name here
+      href: "/signup/"  # Use hero-content url path here
+  tag: signup  # Use hero-content tag here
