@@ -351,16 +351,35 @@
   <div class="row justify-content-center">
     <div class="col-md-4 col-sm-12">
       <form action="" method="post">
-        <!-- email input field -->
+        <!-- Username field -->
         <div class="form-group">
-          <label for="email">Email:</label>
+          <label for="name"> Username </label>
+          <input type="text" class="form-control" required>
+        </div>
+
+        <!-- parent name field -->
+        <div class="form-group">
+          <label for="parent name "> Parent's Name </label>
+          <input type="text" class="form-control" required>
+
+        <!-- Parent's email input field -->
+        <div class="form-group" style="margin-top: 1em;">
+          <label for="parent-email"> Parent's Email: </label>
           <input type="email" class="form-control" required>
         </div>
+
         <!-- password input field -->
         <div class="form-group">
           <label for="pwd">Password:</label>
           <input type="password" class="form-control" required>
         </div>
+        
+        <!-- Confirm password input field -->
+        <div class="form-group">
+          <label for="pwd">Confirm Password:</label>
+          <input type="password" class="form-control" required>
+        </div>
+
         <!-- agreement -->
         <p>By clicking "Create your account", you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
         <!-- signup button -->
