@@ -15,7 +15,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Login" />
 <script type="application/ld+json">
-{"@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/stocky/smarthub-logo.png"}},"description":"Stocky jekyll template","headline":"Login","url":"http://localhost:4000/login/","@context":"https://schema.org"}</script>
+{"@type":"WebPage","url":"http://localhost:4000/login/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/stocky/smarthub-logo.png"}},"description":"Stocky jekyll template","headline":"Login","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <!-- Required meta tags -->
@@ -343,60 +343,62 @@
   <!-- content -->
   <section class="st-section">
     <div class="container">
-      <!-- login starts -->
-<div class="st-login">
-  <!-- login title -->
-  <h2 class="text-center mb-4">Login to your account</h2>
-  <div class="row justify-content-center">
-    <div class="col-md-4">
-      <form action="" method="post">
-        <!-- email input field -->
-        <div class="form-group">
-          <label for="email">Username or Email Address</label>
-          <input type="email" class="form-control" id="email_field" required>
-        </div>
-        <!-- password input field -->
-        <div class="form-group">
-          <label for="pwd">Password</label>
-          <input type="password" class="form-control" id="password_field" required>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for=" Remember-Me"> Remember Me</label>
-        </div>
-        <!-- log-in button -->
-        <button type="submit" class="btn" onclick="login()">Log In</button>
-        <p><a href="/forgot-password/">Forgot Password</a></p>
-        <p><a href="/signup/">Register your account here</a></p>
-      </form>
-      <div class="loggedin_div" id="user_div" style="display:none">
-        <h3>YAYYY! You successfully logged-in using Firebase.....</h3>
-      </div>
-    </div>
-  </div>
-</div>
-<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
+      <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sample FirebaseUI App</title>
+    
+    <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
 
 <script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
+  // Initialize Firebase
+  var config = {
     apiKey: "AIzaSyCoQD_u406p8aUjp2Dp5Euo5KlCOKhcFZ4",
     authDomain: "smart-hub-wod.firebaseapp.com",
     projectId: "smart-hub-wod",
     storageBucket: "smart-hub-wod.appspot.com",
-    messagingSenderId: "543083167758",
+    xmessagingSenderId: "543083167758",
+    //databaseURL? --> only for realtime
     appId: "1:543083167758:web:6a1df71072c541cebefc5f"
   };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  firebase.initializeApp(config);
 </script>
 
-<script src="script.js"></script>
+<script src="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.js"></script>
 
+<script type="text/javascript">
+  // FirebaseUI config.
+  var uiConfig = {
+    'signInSuccessUrl': "http://gosmarthub.com/", //CHANGE THIS
+    'signInOptions': [
+      // Leave the lines as is for the providers you want to offer your users.
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+      firebase.auth.EmailAuthProvider.PROVIDER_ID
+    ],
+    // Terms of service url.
+    'tosUrl': "http://gosmarthub.com/" //CHANGE THIS
+  };
+
+  // Initialize the FirebaseUI Widget using Firebase.
+  var ui = new firebaseui.auth.AuthUI(firebase.auth());
+  // The start method will wait until the DOM is loaded.
+  ui.start('#firebaseui-auth-container', uiConfig);
+</script>
+
+<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.css" />
+    
+  </head>
+  <body>
+    <!-- The surrounding HTML is left untouched by FirebaseUI.
+         Your app may use that space for branding, controls and other customizations.-->
+    <div id="firebaseui-auth-container"></div>
+  </body>
+</html>
     </div>
   </section>
   <!-- footer -->

@@ -1,4 +1,4 @@
-firebase.auth().onAuthStateChanged(function (user) {
+/* firebase.auth().onAuthStateChanged(function (user) {
     console.log("TEST")
     if (user) {
         document.getElementById('user_div').style.display = 'block'
@@ -21,5 +21,5 @@ function login() {
         var errorMessage = error.message
         // ...
     })
-}   
+}    */
 
