@@ -292,6 +292,10 @@ ul.pager li a {
   color: #0B3F84;
 }
 
+.shblue {
+  background-color: #0B3F84;
+}
+
 .header .mainmenu .header-widget .navbar-nav li ul li {
   padding: 10px;
 }
@@ -967,6 +971,12 @@ background-color: var(--theme-primary-button-bg-hover-color);
 .product-banner h1 {
   color: #fff;
   padding-top: 100px;
+  text-align: center;
+}
+
+.product-banner h5 {
+  color: rgb(228, 227, 227);
+  padding-top: 0px;
   text-align: center;
 }
 

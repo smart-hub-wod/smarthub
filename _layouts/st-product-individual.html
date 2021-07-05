@@ -10,6 +10,7 @@
         <div class="col-md-6">
           <div class="banner-title">
             <h1>{{ page.title }}</h1>
+            <h5>{{ page.subtitle }}</h5>
             <div class="review-and-buy ">
               <div class="rating">
                 <span>AVERAGE RATING</span>
@@ -30,9 +31,9 @@
                     {% endfor %}
                     {% endif %}
               </div>
-              <div class="buy-button">
+              <!-- <div class="buy-button">
                 <a href="/checkout/" class="btn" role="button">Quick Buy {{ page.quick-buy-price }}</a>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -90,7 +91,8 @@
               </div>
             </div>
             <div class="col-6">
-              <a href="#" class="btn author-more" role="button">More from {{ page.author }}</a>
+              <!-- <a href="#" class="btn author-more" role="button">More from {{ page.author }}</a> -->
+              <h1 class="choicetitle">only {{ page.quick-buy-price }}</h1>
             </div>
           </div>
           <div class="related-post d-none d-md-block">
@@ -107,15 +109,15 @@
           </div>
 
         </div>
-        <div class="col-md-6 px-md-5">
+        <div class="col-md-6 px-md-5 shblue" style="border-radius: 20px 0 0 20px; color: #fff">
           <div class="post-content">
-            <p class="h3 mb-2">{{ page.title }}</p>
+            <p class="h3 mb-2 pt-4">{{ page.title }}</p>
             {{ content }}
           </div>
 
           <div class="product_pricing">
             <ul class="list-unstyled">
-              {% for price-option in page.price-option %}
+              <!-- {% for price-option in page.price-option %}
               <li>
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
@@ -124,7 +126,7 @@
                   </label>
                 </div>
               </li>
-              {% endfor %}
+              {% endfor %} -->
               <li>
                 <div class="row post-button">
                   <div class="col-6">
@@ -200,25 +202,25 @@
           </div>
 
           <div class="product-meta">
-            <p class="product-meta-title">#Exif Data</p>
+            <p class="product-meta-title">Includes:</p>
             <div class="row">
               <div class="col-6">
-                {% if page.aperture != null %}
-                <p><strong>Aperture</strong></p>
+                {% if page.articles != null %}
+                <p><strong>Articles</strong></p>
                 {% endif %}
-                {% if page.credit != null %}
-                <p><strong>Credit</strong></p>
+                {% if page.videos != null %}
+                <p><strong>Videos</strong></p>
                 {% endif %}
-                {% if page.copyright != null %}
-                <p><strong>Copyright</strong></p>
+                {% if page.quizzes != null %}
+                <p><strong>Quizzes</strong></p>
                 {% endif %}
-                {% if page.camera != null %}
-                <p><strong>Camera</strong></p>
+                {% if page.activities != null %}
+                <p><strong>Activities</strong></p>
                 {% endif %}
-                {% if page.created != null %}
+                <!-- {% if page.created != null %}
                 <p><strong>created</strong></p>
-                {% endif %}
-                {% if page.focal-length != null %}
+                {% endif %} -->
+                <!-- {% if page.focal-length != null %}
                 <p><strong>focal-length</strong></p>
                 {% endif %}
                 {% if page.iso != null %}
@@ -229,22 +231,22 @@
                 {% endif %}
                 {% if page.orientation != null %}
                 <p><strong>orientation</strong></p>
-                {% endif %}
+                {% endif %} -->
               </div>
               <div class="col-6">
-                {% if page.aperture != null %}
-                <p>{{ page.aperture }}</p>
+                {% if page.articles != null %}
+                <p>{{ page.articles }}</p>
                 {% endif %}
-                {% if page.credit != null %}
-                <p>{{ page.credit }}</p>
+                {% if page.videos != null %}
+                <p>{{ page.videos }}</p>
                 {% endif %}
-                {% if page.copyright != null %}
-                <p>{{ page.copyright }}</p>
+                {% if page.quizzes != null %}
+                <p>{{ page.quizzes }}</p>
                 {% endif %}
-                {% if page.camera != null %}
-                <p>{{ page.camera }}</p>
+                {% if page.activities != null %}
+                <p>{{ page.activities }}</p>
                 {% endif %}
-                {% if page.created != null %}
+                <!-- {% if page.created != null %}
                 <p>{{ page.created }}</p>
                 {% endif %}
                 {% if page.focal-length != null %}
@@ -258,7 +260,7 @@
                 {% endif %}
                 {% if page.orientation != null %}
                 <p>{{ page.orientation }}</p>
-                {% endif %}
+                {% endif %} -->
               </div>
             </div>
           </div>
