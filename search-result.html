@@ -2,7 +2,7 @@
 layout: st-layout
 title: Search result
 ---
-<section class="search-result">
+<!-- <section class="search-result">
   <div class="container">
     <div class="search-section">
       <h1>6 Products Result for Photo</h1>
@@ -36,4 +36,25 @@ title: Search result
 
     </div>
   </div>
-</section>
+</section> -->
+
+
+<!-- Html Elements for Search -->
+<div id="search-container">
+  <input type="text" id="search-input" placeholder="Search Smart Hub...">
+  <ul id="results-container"></ul>
+  </div>
+  
+  <!-- Script pointing to search-script.js -->
+  <script src="/search-script.js" type="text/javascript"></script>
+  
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchResultTemplate: '<div><a href="{url}"><h1>{title}</h1></a></div>',
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    noResultsText: ("No result found!")
+  })
+  </script>

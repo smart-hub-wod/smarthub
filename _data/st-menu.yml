@@ -1,6 +1,6 @@
 menu:
 - title: Courses  # Use header title here
-  href: "#"  # Use header title url here
+  href: "/shop-archive/"  # Use header title url here
   option:
     - title: Full width
       href: /full-width/
@@ -18,13 +18,15 @@ menu:
     - title: Shop - archive
       href: /shop-archive/
     - title: Shop - single
-      href: /travel/
+      href: /software-engineering/
     - title: Checkout
       href: /checkout/
     - title: Wishlist
       href: /wishlist/
     - title: Forgot Password
       href: /forgot-password/
+    - title: Lesson Plans
+      href: /course-archive/
 - title: blog  # Use header title here
   href: "#"  # Use header title url here
   option:

@@ -1,0 +1,22 @@
+<div class="blog-image-section">
+<div class="card-columns">
+  {% for post in site.tags.Products %}
+  {% if post.image != null%}
+  <div class="blog-details" style="height:182px">
+    <a href="{{ post.url }}">
+      <div class="card m-0">
+        <img class="img-fluid" src="{{ post.image }}" alt="{{ post.title }}">
+      </div>
+    </a>
+    <div class="hover-block">
+      <div class="stocky-hover-lines">
+        <a href="{{post.url}}" class="btn">Details</a>
+        <a href="/wishlist/"><i class="fas fa-heart"></i> Add to wishlist</a>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  {% endfor %}
+  <div class="more d-md-none">Load more photos</div>
+</div>
+</div>

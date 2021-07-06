@@ -6,7 +6,7 @@
 :root {
   --theme-primary-button-bg-color: #007bff;
   --theme-primary-button-bg-hover-color: #0056b3;
-  --theme-secondary-button-bg-color: #40b93c;
+  --theme-secondary-button-bg-color: #fff;
   --theme-secondary-button-bg-hover-color: #30962d;
   --theme-tertiary-button-bg-color: #c2c2c2;
   --theme-tertiary-button-bg-hover-color: #b1b1b1;
@@ -16,7 +16,7 @@
 
 /* Font */
 html, body {
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif, "Open Sans";
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 /* General elements */
@@ -42,7 +42,8 @@ h6 { font-size: 14px; }
 
 h1, h2, h3, h4, h5 {
   color: #000;
-  // font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
   margin-top: 0;
 	margin-bottom: 1rem;
 }
@@ -126,7 +127,7 @@ a.btn {
 /* Page Banner */
 
 .page-banner {
-  background-image: url("/assets/images/stocky/Shapes_3.gif");
+  background-image: url("/assets/images/stocky/home-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -149,7 +150,7 @@ a.btn {
 }
 
 .page-banner a {
-  color: #fff;
+  color: #0B3F84;
 }
 
 .page-banner i {
@@ -289,7 +290,7 @@ ul.pager li a {
 }
 
 .choicetitle {
-  color: #0B3F84;
+  color: #0B3F84 !important;
 }
 
 .shblue {
@@ -318,7 +319,7 @@ ul.pager li a {
   position: absolute;
   top: 10px;
   left: 10px;
-  background-color: red;
+  background-color: #FE5C36;
   color: #fff;
   border-radius: 100%;
   display: block;
@@ -435,7 +436,7 @@ ul.pager li a {
 }
 
 .dropdown-menu a {
-  color: #909090;
+  color: #cfcfcf;
 }
 
 .dropdown-menu a:hover {
@@ -651,7 +652,7 @@ background-color: var(--theme-primary-button-bg-hover-color);
 /* Home Page Search Section */
 
 .home-search-section {
-  background-image: url("/assets/images/stocky/Shapes_3.gif");
+  background-image: url("/assets/images/stocky/home-bg.png");
   background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat;
@@ -726,7 +727,7 @@ background-color: var(--theme-primary-button-bg-hover-color);
 /* Home Content Section */
 
 .home-content-section .container {
-  background-image: url("/assets/images/stocky/Shapes_3.gif");
+  background-image: url("/assets/images/stocky/home-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -856,7 +857,7 @@ background-color: var(--theme-primary-button-bg-hover-color);
 
 .blog-image-section .hover-block .stocky-hover-lines {
   transition: opacity 0.35s, transform 0.35s;
-  border: 1px solid rgba(255, 255, 255, 0.30);
+  // border: 1px solid rgba(255, 255, 255, 0.30);
   width: 100%;
   height: 100%;
   display: flex;
@@ -1135,7 +1136,6 @@ background-color: var(--theme-primary-button-bg-hover-color);
 
 .product-individual-content .post-button a {
   text-transform: capitalize;
-  font-size: 12px;
   color: #fff;
   width: 100%;
   font-weight: 600;
@@ -1159,12 +1159,12 @@ background-color: var(--theme-primary-button-bg-hover-color);
 
 .product-individual-content .wishlist a ,
 .product-individual-content .product-share a {
-  color: #000;
+  color: #fff;
 }
 
 .product-individual-content .wishlist a:hover ,
 .product-individual-content .product-share a:hover {
-  color: #909090;
+  color: #FE5C36;
 }
 
 .product-individual-content .wishlist {
@@ -1728,7 +1728,7 @@ footer h4 {
 }
 
 .footer-widget .footer-logo {
-  width: 150px;
+  width: 175px;
 }
 
 .footer-widget-column ul{
@@ -1849,7 +1849,7 @@ footer .social-icon-section ul li strong {
   position: absolute;
   pointer-events: none;
   border-color: #0B3F84;
-  border-bottom-color: #111;
+  border-bottom-color: #062f64;
   border-width: 10px;
 }
 
@@ -1883,7 +1883,7 @@ footer .social-icon-section ul li strong {
 
 .navbar-nav .dropdown-menu li:not(:last-child),
 .navbar-nav .dropdown-menu .dropdown-menu li:not(:last-child) {
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid #0B3F84;
 }
 
 .blog-image-section .card-columns,
@@ -1904,7 +1904,7 @@ footer .social-icon-section ul li strong {
   /* Header */
 
   .header {
-    background-color: #000;
+    background-color: #0B3F84;
   }
 
   .header .mainmenu {
@@ -1939,7 +1939,7 @@ footer .social-icon-section ul li strong {
     text-transform: capitalize;
     padding: 5px;
     left: auto;
-    background-color: rgba(0,0,0,0.5);
+    background-color: #0B3F84;
   }
 
   .navbar-nav .show .dropdown-menu li,

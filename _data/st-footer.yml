@@ -1,63 +1,63 @@
 footer:
 - title: <a href="/"> <img class="footer-logo" src="/assets/images/stocky/smarthub-logo.png" alt=""></a> # Use footer title here
   option:
-    - title: <div class="footer-icon"><span><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></span><span><a href="#" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a></span><span><a href="#" title="Linkedin"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></span><span><a href="#" title="Pinterest"><i class="fab fa-pinterest-p"></i></a></span></div>  # Use footer option links name here
+    - title: <div class="footer-icon"><span><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></span><span><a href="#" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a></span><span><a href="#" title="Linkedin"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></span><span><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></span></div>  # Use footer option links name here
       href:  # Use footer option url here
       icon:  # Use footer option icons here
-    - title: <div class="footer-icon"><span><a href="#" title="Google-Plus"><i class="fab fa-google-plus-g"></i></a></span><span><a href="#" title="Tumblr"><i class="fab fa-tumblr"></i></a></span><span><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></span><span><a href="#" title="Flickr"><i class="fab fa-flickr"></i></a></span></div>  # Use footer option links name here
-      href:   # Use footer option url here
-      icon:   # Use footer option icons here
     - title: <div class="copyright-text"><strong>© 2021 Smart Hub</strong> <br> <span>Built with Stocky Theme</span></div>  # Use footer option links name here
       href:   # Use footer option url here
       icon:  # Use footer option icons here
-- title: Our Company  # Use footer title here
-  option:
-    - title: Sell content  # Use footer option links name here
-      href: "#"  # Use footer option url here
-      icon:  # Use footer option icons here
-    - title: Subscribe/Renew  # Use footer option links name here
-      href: "#"  # Use footer option url here
-      icon:  # Use footer option icons here
-    - title: About us  # Use footer option links name here
-      href: "#"  # Use footer option url here
-      icon:  # Use footer option icons here
-    - title: Careers  # Use footer option links name here
-      href: "#"  # Use footer option url here
-      icon:  # Use footer option icons here
-    - title: Press/Media  # Use footer option links name here
-      href: "#"  # Use footer option url here
-      icon:  # Use footer option icons here
-- title: Stocky  # Use footer title here  # Use footer option icons here
+- title: Smart Hub  # Use footer title here
   option:
     - title: Home  # Use footer option links name here
+      href: "/index.html"  # Use footer option url here
+      icon:  # Use footer option icons here
+    - title: Sign Up  # Use footer option links name here
+      href: "/signup"  # Use footer option url here
+      icon:  # Use footer option icons here
+    - title: Contact  # Use footer option links name here
+      href: "/contact"  # Use footer option url here
+      icon:  # Use footer option icons here
+    - title: Terms and Conditions  # Use footer option links name here
       href: "#"  # Use footer option url here
       icon:  # Use footer option icons here
-    - title: Stock photos  # Use footer option links name here
+    - title: Privacy Policy  # Use footer option links name here
       href: "#"  # Use footer option url here
       icon:  # Use footer option icons here
-    - title: Videography  # Use footer option links name here
-      href: "#"  # Use footer option url here
-      icon:  # Use footer option icons here
-    - title: Music  # Use footer option links name here
-      href: "#"  # Use footer option url here
-      icon:  # Use footer option icons here
-    - title: Blog  # Use footer option links name here
-      href: "#"  # Use footer option url here
-      icon:  # Use footer option icons here
-- title: Category  # Use footer title here
+- title: Courses  # Use footer title here  # Use footer option icons here
   option:
-    - title: Cities  # Use footer option links name here
+    - title: Coming soon  # Use footer option links name here
       href: "#"  # Use footer option url here
       icon:  # Use footer option icons here
-    - title: Abstract  # Use footer option links name here
+    - title: Coming soon  # Use footer option links name here
       href: "#"  # Use footer option url here
       icon:  # Use footer option icons here
-    - title: People  # Use footer option links name here
+    - title: Coming soon  # Use footer option links name here
       href: "#"  # Use footer option url here
       icon:  # Use footer option icons here
-    - title: Celebration  # Use footer option links name here
+    - title: Coming soon  # Use footer option links name here
       href: "#"  # Use footer option url here
       icon:  # Use footer option icons here
-    - title: Collections  # Use footer option links name here
+    - title: Coming soon  # Use footer option links name here
+      href: "#"  # Use footer option url here
+      icon:  # Use footer option icons here
+- title:  # Use footer title here
+  option:
+    - title: Coming soon  # Use footer option links name here
+      href: "#"  # Use footer option url here
+      icon:  # Use footer option icons here
+    - title: Coming soon  # Use footer option links name here
+      href: "#"  # Use footer option url here
+      icon:  # Use footer option icons here
+    - title: Coming soon  # Use footer option links name here
+      href: "#"  # Use footer option url here
+      icon:  # Use footer option icons here
+    - title: Coming soon  # Use footer option links name here
+      href: "#"  # Use footer option url here
+      icon:  # Use footer option icons here
+    - title: Coming soon  # Use footer option links name here
+      href: "#"  # Use footer option url here
+      icon:  # Use footer option icons here
+    - title: Coming soon  # Use footer option links name here
       href: "#"  # Use footer option url here
       icon:  # Use footer option icons here

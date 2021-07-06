@@ -96,7 +96,7 @@
             </div>
           </div>
           <div class="related-post d-none d-md-block">
-            <h5>Related Products</h5>
+            <h5>Related Courses</h5>
             <div class="row">
               {% for post in site.tags.Products limit: 4 %}
               <div class="col-3 products-spacing">
@@ -111,7 +111,7 @@
         </div>
         <div class="col-md-6 px-md-5 shblue" style="border-radius: 20px 0 0 20px; color: #fff">
           <div class="post-content">
-            <p class="h3 mb-2 pt-4">{{ page.title }}</p>
+            <h3 class="h3 mb-2 pt-4">{{ page.title }}</h3>
             {{ content }}
           </div>
 
@@ -129,12 +129,12 @@
               {% endfor %} -->
               <li>
                 <div class="row post-button">
-                  <div class="col-6">
+                  <!-- <div class="col-6">
                     <a href="/checkout/" class="btn wishlist-button" role="button">Buy Now</a>
                   </div>
-                  <div class="col-6">
-                    <a href="/checkout/" class="btn add-to-cart-button" role="button">Add to Cart</a>
-                  </div>
+                  <div class="col-6"> -->
+                  <a href="/checkout/" class="btn add-to-cart-button pt-2 pb-2 fs-3" role="button">Add to Cart</a>
+                  <!-- </div> -->
                 </div>
               </li>
             </ul>
@@ -144,7 +144,7 @@
             <div class="col-sm-6 my-3 p-0">
               <div class="wishlist">
                 <div class="st-modal">
-                  <div class="bg-button">
+                  <div class="bg-button text-white">
                     <a href="#" class="btn" role="button" data-toggle="modal" data-target=".modal-wishlist"><span><i class="fas fa-heart"></i> Add to wishlist</span></a>
                   </div>
                   <div class="modal fade modal-wishlist" tabindex="-1" role="dialog" aria-hidden="true">
@@ -290,7 +290,7 @@
               {% for post in site.tags.Products limit: 4 %}
               <div class="col-3 products-spacing">
                 <a href="{{ post.url }}">
-                  <div class="single-post" style="background-image: url({{ post.image }});"></div>
+                  <div class="single-post" style="background-image: url({{ post.image }})"></div>
                 </a>
               </div>
               {% endfor %}

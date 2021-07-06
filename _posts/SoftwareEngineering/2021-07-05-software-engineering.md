@@ -28,11 +28,7 @@ activities: 6
 # shutter-speed: 0.01
 # orientation: 1
 image: /assets/images/products/softwareEngineering.jpg
-additional-images:
-  # - /assets/images/products/blog-1.jpg
-  # - /assets/images/stocky/img-1.jpg
-  # - /assets/images/stocky/img-2.jpg
-  # - /assets/images/stocky/img-3.jpg
+
 ---
 
 As a software engineer, you'll work in a constantly evolving environment, due to technological advances and the strategic direction of the organisation you work for. You'll create, maintain, audit and improve systems to meet particular needs, often as advised by a systems analyst or architect, testing both hard and software systems to diagnose and resolve system faults.

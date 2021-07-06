@@ -1,0 +1,28 @@
+{% include st-head.html %}
+<!-- body section starts -->
+
+<body>
+  <!-- header  -->
+  {% include st-header.html %}
+
+  {% include st-page-banner.html %}
+
+  <!-- content -->
+  <section class="st-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mb-4 content-order">
+          <h1>{{ page.title }}</h1>
+          <p>{{page.course-info.lesson-1.article-1-1}}
+            <iframe width="560" height="315" src="{{course-info.lesson-1.video-1-2}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-4">
+          {% include st-sidewidget.html %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- footer -->
+  {% include st-footer.html %}
+  <!-- footer-script -->
+  {% include st-footer-script.html %}
