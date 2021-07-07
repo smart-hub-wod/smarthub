@@ -4,19 +4,19 @@
 <head>
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Parent Dashboard | Smart Hub</title>
+<title>Cart Page | Smart Hub</title>
 <meta name="generator" content="Jekyll v3.8.7" />
-<meta property="og:title" content="Parent Dashboard" />
+<meta property="og:title" content="Cart Page" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An Educational Platform" />
 <meta property="og:description" content="An Educational Platform" />
-<link rel="canonical" href="http://localhost:4000/parDash.html" />
-<meta property="og:url" content="http://localhost:4000/parDash.html" />
+<link rel="canonical" href="http://localhost:4000/cartPage.html" />
+<meta property="og:url" content="http://localhost:4000/cartPage.html" />
 <meta property="og:site_name" content="Smart Hub" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Parent Dashboard" />
+<meta property="twitter:title" content="Cart Page" />
 <script type="application/ld+json">
-{"headline":"Parent Dashboard","@type":"WebPage","url":"http://localhost:4000/parDash.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/stocky/smarthub-logo.png"}},"description":"An Educational Platform","@context":"https://schema.org"}</script>
+{"@type":"WebPage","description":"An Educational Platform","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/stocky/smarthub-logo.png"}},"headline":"Cart Page","url":"http://localhost:4000/cartPage.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <!-- Required meta tags -->
@@ -46,7 +46,7 @@
 
 
 <!-- page title -->
-  <title>Parent Dashboard</title>
+  <title>Cart Page</title>
 </head>
 <!-- head section ends -->
 
@@ -327,54 +327,47 @@
 <!-- header section ends -->
 
   <!-- content -->
-  <section id="welcome">
-  <div class="container-fluid">
-    <h5> Welcome! </h5>
-    <h1 class="name-text"> user name </h1>
-    <p class="dash-info-text">
-      Welcome! Here is your dashboard to manage your students! Here you can manage and access each student’s account.
-      Welcome! Today Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac interdum purus.
-      Welcome! Today Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac interdum purus.
-    </p>
-    <button class="btn btn-primary btn-lg px-5" type="button" style="position:absolute; right: 3rem; "> Add New Student </button>
-  </div>
-</section>
+  <div id= "cart" class="container-fluid" >
+    
+    <h1 class="cart-heading"> Cart Summary </h1>
+    <!-- need to use for loop for the div below -->
+    <div class="row">
+        <div class="col">
+            <img class="course-img" src="https://th.bing.com/th/id/OIP.1G7uWNZl0yUuWEod7VV66QAAAA?w=168&h=180&c=7&o=5&pid=1.7" alt="math course image">
+            <div class="course-text">
+                <h1 class="name">
+                    Software Engineering
+                </h1>
+                <h2 class="course-sub">
+                    subtitle?
+                </h2>
 
+                <h3 class="name course-price"> $50 </h3>
+                
 
-<section id="students">
-  <div class="container-fluid">
-    <h2 class="mystudents"> My Students </h2>
-    <!--  for real gotta loop thru this thing -->
-    <div class="card">
-
-      <div class="card-body">
-        <img class="student-img" src="https://th.bing.com/th/id/OIP.1G7uWNZl0yUuWEod7VV66QAAAA?w=168&h=180&c=7&o=5&pid=1.7" alt="student picture" />
-        <div class="text">
-          <h3 class="student-name"> Bobby Brown </h3>
-          <p id="achievement" class="info">
-            Grad Level/Start Ranking
-          </p>
+                
+                
+                <div class="course-info">
+                    <p>
+                        Includes: 
+                        <ul class="course-list">
+                            <li> something </li>
+                            <li> something </li>
+                            <li> something </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
+    
+    <h3 class="total-price tot"> Total </h3>
+    <h3 class="total-price"> $100 </h3>
+    <br>
+    <a type="button" class="btn" href="#">
 
-    <div class="card">
-
-      <div class="card-body">
-        <img class="student-img" src="https://th.bing.com/th/id/OIP.1G7uWNZl0yUuWEod7VV66QAAAA?w=168&h=180&c=7&o=5&pid=1.7" alt="student picture" />
-        <div class="text">
-          <h3 class="student-name"> Bobby Brown </h3>
-          <p id="achievement" class="info">
-            Grad Level/Start Ranking
-          </p>
-        </div>
-      </div>
-    </div>
-
-
-
-</section>
-
+</div>
+    
   <!-- footer -->
   
 

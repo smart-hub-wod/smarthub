@@ -7,9 +7,17 @@
 #   tag: features  # Use hero-content tag here
 
 call-to-action:
-- title: 
-  description:  # Use hero-content description here
-  button:
-    - name: Sign Up Today!  # Use hero-content button name here
-      href: "/signup/"  # Use hero-content url path here
-  tag: signup  # Use hero-content tag here
+  - title:
+    description: # Use hero-content description here
+    button:
+      - name: Sign Up Today! # Use hero-content button name here
+        href: "/signup/" # Use hero-content url path here
+    tag: signup # Use hero-content tag here
+
+    call-to-action:
+  - title:
+    description: # Use hero-content description here
+    button:
+      - name: Add New Student # Use hero-content button name here
+        href: "/contact/" # Use hero-content url path here
+    tag: new-student # Use hero-content tag here

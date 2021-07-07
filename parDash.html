@@ -1,27 +1,36 @@
 ---
-layout: "default"
+layout: full-width
 title: "Parent Dashboard"
-permalink: "/parDash.html"
 ---
 
-
-<section id="welcome">
-  <div class="container-fluid">
-    <h5> Welcome! </h5>
-    <h1 class="name-text"> user name </h1>
-    <p class="dash-info-text">
-      Welcome! Here is your dashboard to manage your students! Here you can manage and access each student’s account.
-      Welcome! Today Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac interdum purus.
-      Welcome! Today Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac interdum purus.
-    </p>
-    <button class="btn btn-primary btn-lg px-5" type="button" style="position:absolute; right: 3rem; "> Add New Student </button>
+<div class="welcome">
+  <div class="title-line">
+    <h2 class="st-title">Parent Dashboard</h2>
   </div>
-</section>
+  <p>Welcome! Here is your dashboard to manage your students! Here you can manage and access each student’s account.
+    Welcome! Today Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac interdum purus.</p>
 
+    {% include st-call-to-action.html tag="new-student" button-alignment="right"%}
+</div>
+
+<head>
+  <link rel="import" href="/_includes/firebase-config.html">
+</head>
+
+<script type="text/javascript">
+  var doc= document.querySelector('link[rel="import"]').import;
+  console.log(signedIn)
+</script>
+
+{% if user %}
+<section id="setupBox">
+  <h1>ENTER YOUR NAME:</h1>
+</section>
+{% endif %}
 
 <section id="students">
-  <div class="container-fluid">
-    <h2 class="mystudents"> My Students </h2>
+  <div class="">
+    <h2 class="mystudents">My Students</h2>
     <!--  for real gotta loop thru this thing -->
     <div class="card">
 
@@ -35,20 +44,5 @@ permalink: "/parDash.html"
         </div>
       </div>
     </div>
-
-    <div class="card">
-
-      <div class="card-body">
-        <img class="student-img" src="https://th.bing.com/th/id/OIP.1G7uWNZl0yUuWEod7VV66QAAAA?w=168&h=180&c=7&o=5&pid=1.7" alt="student picture" />
-        <div class="text">
-          <h3 class="student-name"> Bobby Brown </h3>
-          <p id="achievement" class="info">
-            Grad Level/Start Ranking
-          </p>
-        </div>
-      </div>
-    </div>
-
-
 
 </section>

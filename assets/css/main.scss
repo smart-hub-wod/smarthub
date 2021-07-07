@@ -9,16 +9,16 @@
 // Welecome section
 #welcome .container-fluid {
   padding: 10% 7% 3% 7%;
-  color: #8C8A89;
+  color: #8c8a89;
 }
 
 #welcome .btn {
   margin-right: 12%;
-
 }
 
-.name-text {
-  color: #0B3F84;
+// refractor name, also used this selector in course-heading
+.name {
+  color: #0b3f84;
   font-size: 2.63rem;
   font-weight: bold;
 }
@@ -31,21 +31,20 @@
 
 .mystudents {
   margin-top: 5%;
-  color: #0B3F84;
-  font-size: 2.63rem;
+  color: #0b3f84;
+  font-size: 1.65rem;
   font-weight: bold;
-
 }
 
 #students .card {
   width: 50%;
-  background-color: #0B3F84;
+  background-color: #0b3f84;
   border-radius: 3rem;
   margin-top: 5%;
 }
 
 #students .container-fluid {
-  padding: 0 7% 5% 7%;
+  // padding: 0 7% 5% 7%;
 }
 
 #students .card-img-top {
@@ -57,7 +56,6 @@
   top: 3rem;
   left: 4rem;
   color: white;
-
 }
 
 .student-img {
@@ -74,5 +72,74 @@
 #achievement.info {
   font-size: 1.5rem;
   font-weight: 700;
+}
 
+// Cart Page start
+
+#cart.container-fluid {
+  margin-top: 10%;
+  padding: 0 15%;
+  overflow: hidden;
+}
+
+#cart .row {
+  margin: 3% 0;
+  padding: 5% 3%;
+  background-color: #e5e5e5;
+}
+
+.course-img {
+  float: left;
+  width: 15%;
+  border-radius: 50%;
+}
+
+.cart-heading {
+  font-size: 4rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 3%;
+  color: #0b3f84;
+}
+
+.course-text {
+  position: relative;
+  left: 10%;
+  color: #0b3f84;
+}
+
+.course-sub {
+  color: #8c8a89;
+  font-size: 1.5rem;
+}
+
+.course-info {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.course-list {
+  font-size: 1.2rem;
+  padding-left: 35%;
+}
+
+.course-price {
+  position: relative;
+  top: 10rem;
+  left: 45rem;
+  font-size: 4rem;
+  color: #0b3f84;
+}
+
+.total-price {
+  display: inline;
+  position: relative;
+  left: 52rem;
+}
+
+.tot {
+  padding-right: 30%;
+}
+
+.checkout-btn {
 }

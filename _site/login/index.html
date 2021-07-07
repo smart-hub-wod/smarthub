@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Login" />
 <script type="application/ld+json">
-{"headline":"Login","@type":"WebPage","url":"http://localhost:4000/login/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/stocky/smarthub-logo.png"}},"description":"An Educational Platform","@context":"https://schema.org"}</script>
+{"@type":"WebPage","description":"An Educational Platform","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/stocky/smarthub-logo.png"}},"headline":"Login","url":"http://localhost:4000/login/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <!-- Required meta tags -->
@@ -385,11 +385,10 @@
 <script type="text/javascript">
   // FirebaseUI config.
   var uiConfig = {
-    'signInSuccessUrl': "http://gosmarthub.com/", //CHANGE THIS
+    'signInSuccessUrl': "/parDash/",
     'signInOptions': [
       // Leave the lines as is for the providers you want to offer your users.
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-      firebase.auth.FacebookAuthProvider.PROVIDER_ID,
       firebase.auth.EmailAuthProvider.PROVIDER_ID
     ],
     // Terms of service url.
@@ -400,6 +399,19 @@
   var ui = new firebaseui.auth.AuthUI(firebase.auth());
   // The start method will wait until the DOM is loaded.
   ui.start('#firebaseui-auth-container', uiConfig);
+
+  firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+      // User is signed in, see docs for a list of available properties
+      // https://firebase.google.com/docs/reference/js/firebase.User
+      var signedIn = true;
+      // ...
+    } else {
+      // User is signed out
+      // ...
+      console.log("GOODBYE")
+    }
+  });
 </script>
 
 <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.css" />

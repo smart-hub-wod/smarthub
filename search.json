@@ -1,7 +1,7 @@
 ---
 ---
 [
-  {% for st-course in site.st-course %}
+  {% for post in site.tags.Products %}
     {
 
       "title"    : "{{ post.title | escape }}",
@@ -10,6 +10,6 @@
       "tags"     : "{{ post.tags | join: ', ' }}",
       "date"     : "{{ post.date }}"
 
-    } {% unless forloop.last %},{% endunless %}
+    }{% unless forloop.last %},{% endunless %}
   {% endfor %}
-]
+  ]
