@@ -3,3 +3,76 @@
 ---
 
 @import "stocky";
+
+// parent dashboard
+
+// Welecome section
+#welcome .container-fluid {
+  padding: 10% 7% 3% 7%;
+  color: #8C8A89;
+}
+
+#welcome .btn {
+  margin-right: 12%;
+
+}
+
+.name-text {
+  color: #0B3F84;
+  font-size: 2.63rem;
+  font-weight: bold;
+}
+
+.dash-info-text {
+  padding: 2% 5% 3% 0;
+}
+
+// Students section
+
+.mystudents {
+  margin-top: 5%;
+  color: #0B3F84;
+  font-size: 2.63rem;
+  font-weight: bold;
+
+}
+
+#students .card {
+  width: 50%;
+  background-color: #0B3F84;
+  border-radius: 3rem;
+  margin-top: 5%;
+}
+
+#students .container-fluid {
+  padding: 0 7% 5% 7%;
+}
+
+#students .card-img-top {
+  float: right;
+}
+
+#students .text {
+  position: relative;
+  top: 3rem;
+  left: 4rem;
+  color: white;
+
+}
+
+.student-img {
+  float: left;
+  border-radius: 50%;
+}
+
+.student-name {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: white;
+}
+
+#achievement.info {
+  font-size: 1.5rem;
+  font-weight: 700;
+
+}
