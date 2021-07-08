@@ -1,47 +1,99 @@
 ---
-layout: "default"
+layout: "full-width"
 title: "Cart Page"
 permalink: "/cartPage.html"
 ---
 
-<div id= "cart" class="container-fluid" >
-    
-    <h1 class="cart-heading"> Cart Summary </h1>
-    <!-- need to use for loop for the div below -->
-    <div class="row">
-        <div class="col">
-            <img class="course-img" src="https://th.bing.com/th/id/OIP.1G7uWNZl0yUuWEod7VV66QAAAA?w=168&h=180&c=7&o=5&pid=1.7" alt="math course image">
-            <div class="course-text">
-                <h1 class="name">
-                    Software Engineering
-                </h1>
-                <h2 class="course-sub">
-                    subtitle?
-                </h2>
+<div id="cart" class="container">
 
-                <h3 class="name course-price"> $50 </h3>
-                
+  <h1 class="cart-heading"> Cart Summary </h1>
+  <!-- 1 card == 1 course -->
+  <div class="card">
+    <!-- self-end in addition, the buttons will align vertically, if want horizontal use align-items: stretch -->
+    <div class="card-header" style="">
+      <button onclick="" type="button" class="btn btn-dark"> Remove </button>
+    </div>
 
-                
-                
-                <div class="course-info">
-                    <p>
-                        Includes: 
-                        <ul class="course-list">
-                            <li> something </li>
-                            <li> something </li>
-                            <li> something </li>
-                        </ul>
-                    </p>
-                </div>
-            </div>
+    <div class="card-body">
+      <img class="course-img" src="assets\images\stocky\cart_page_img.png" alt="math course image">
+      <div class="course-text">
+        <h1 class="card-title mb-3">
+          Software Engineering
+        </h1>
+        <h2 class="card-subtitle mb-4">
+          This course targets for .....Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          ea deserunt mollit anim id est laborum.
+        </h2>
+
+        <!-- <h3 class="name course-price"> $50 </h3> -->
+
+        <div class="course-info">
+          <p>
+            Includes:
+          <ul class="course-list">
+
+            <li> memory technique to enhence cognitive ability </li>
+            <li> study strategy to be successful in school </li>
+            <li> something </li>
+          </ul>
+          </p>
+        </div>
+      </div>
+      <div class="card-price">
+        <h1 class="card-title" style="margin:0;"> $50 </h1>
         </div>
     </div>
-    
-    <h3 class="total-price tot"> Total </h3>
-    <h3 class="total-price"> $100 </h3>
-    <br>
-    <a type="button" class="btn" href="#">
+
+  </div>
+
+  <div class="card">
+    <!-- self-end in addition, the buttons will align vertically, if want horizontal use align-items: stretch -->
+    <div class="card-header" style="">
+      <button onclick="" type="button" class="btn btn-dark"> Remove </button>
+    </div>
+
+    <div class="card-body">
+      <img class="course-img" src="assets\images\stocky\cart_page_img.png" alt="math course image">
+      <div class="course-text">
+        <h1 class="card-title mb-3">
+          Software Engineering
+        </h1>
+        <h2 class="card-subtitle mb-4">
+          This course targets for .....Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          ea deserunt mollit anim id est laborum.
+        </h2>
+
+        <!-- <h3 class="name course-price"> $50 </h3> -->
+
+        <div class="course-info">
+          <p>
+            Includes:
+          <ul class="course-list">
+
+            <li> memory technique to enhence cognitive ability </li>
+            <li> study strategy to be successful in school </li>
+            <li> something </li>
+          </ul>
+          </p>
+        </div>
+      </div>
+      <div class="card-price">
+        <h1 class="card-title" style="margin:0;"> $50 </h1>
+        </div>
+    </div>
+
+  </div>
+
+  <div class="price-tag">
+    <h3 class="price-text tot my-5"> Total </h3>
+    <h3 class="price-text"> $100 </h3>
+    <form class="" action="index.html" method="post">
+      <input type="checkbox" name="" value="">
+      <label> Please confirm that you are over the age of 18 </label>
+    </form>
+  </div>
+
+  <button type="button" onclick="" class="btn btn-lg btn-dark px-5" style="position: absolute; right: 13rem;"> Checkout </button>
+
 
 </div>
-    

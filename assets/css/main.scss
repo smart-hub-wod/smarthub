@@ -76,29 +76,59 @@
 
 // Cart Page start
 
-#cart.container-fluid {
+#cart.container {
   margin-top: 10%;
-  padding: 0 15%;
   overflow: hidden;
+  padding-bottom: 10rem;
 }
 
-#cart .row {
-  margin: 3% 0;
-  padding: 5% 3%;
-  background-color: #e5e5e5;
+#cart .card {
+  background-color: #E5E5E5;
+  margin-top: 3%;
 }
 
+#cart .card-title {
+  font-weight: bold;
+  color: #0b3f84;
+
+}
+
+#cart .card-subtitle {
+  color: #8c8a89;
+  font-size: 1rem;
+
+}
+
+#cart .card-header {
+  display: flex;
+  justify-content: flex-end;
+  border:none;
+  background-color:#E5E5E5;
+  padding-bottom: 0;
+}
+
+.card-price {
+  display: flex;
+  border: none;
+  background-color:white;
+  justify-content: flex-end;
+  padding-right: 4rem;
+
+}
+
+.card-price .card-title {
+  font-size: 3rem;
+}
 .course-img {
   float: left;
-  width: 15%;
+  width: 30%;
   border-radius: 50%;
 }
 
 .cart-heading {
-  font-size: 4rem;
+  font-size: 2.5rem;
   text-align: center;
   font-weight: bold;
-  margin-bottom: 3%;
   color: #0b3f84;
 }
 
@@ -106,21 +136,21 @@
   position: relative;
   left: 10%;
   color: #0b3f84;
+  width: 48rem;
 }
 
-.course-sub {
-  color: #8c8a89;
-  font-size: 1.5rem;
-}
 
 .course-info {
   font-size: 1.3rem;
   font-weight: bold;
+  position: relative;
+  bottom: 0.1rem;
 }
 
 .course-list {
   font-size: 1.2rem;
   padding-left: 35%;
+  margin-bottom: 0;
 }
 
 .course-price {
@@ -131,15 +161,16 @@
   color: #0b3f84;
 }
 
-.total-price {
-  display: inline;
-  position: relative;
-  left: 52rem;
+// price tag under the cart page
+.price-tag {
+  text-align: right;
+}
+
+.price-text {
+  display: inline-block;
+  font-size: 1.75rem;
 }
 
 .tot {
   padding-right: 30%;
-}
-
-.checkout-btn {
 }
