@@ -10,7 +10,7 @@ title: "Parent Dashboard"
   <p>Welcome! Here is your dashboard to manage your students! Here you can manage and access each student’s account.
     Welcome! Today Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac interdum purus.</p>
 
-    {% include st-call-to-action.html tag="new-student" button-alignment="right"%}
+  {% include st-call-to-action.html tag="new-student" button-alignment="right"%}
 </div>
 
 <head>
@@ -18,7 +18,7 @@ title: "Parent Dashboard"
 </head>
 
 <script type="text/javascript">
-  var doc= document.querySelector('link[rel="import"]').import;
+  var doc = document.querySelector('link[rel="import"]').import;
   console.log(signedIn)
 </script>
 
@@ -29,20 +29,23 @@ title: "Parent Dashboard"
 {% endif %}
 
 <section id="students">
-  <div class="">
-    <h2 class="mystudents">My Students</h2>
-    <!--  for real gotta loop thru this thing -->
+  <h2 class="mystudents">My Students</h2>
+  <!--  for real gotta loop thru this thing -->
+  <!-- how will the student profile be? each student should have different?  -->
+  <a href="../student-dash" role="button" class="btn btn-property-del" style="width:600px;">
     <div class="card">
-
       <div class="card-body">
-        <img class="student-img" src="https://th.bing.com/th/id/OIP.1G7uWNZl0yUuWEod7VV66QAAAA?w=168&h=180&c=7&o=5&pid=1.7" alt="student picture" />
+        <img class="student-img" src="https://th.bing.com/th/id/OIP.R4UQspZW7oAAq4fbbCbixgHaGf?w=189&h=180&c=7&o=5&pid=1.7" alt="student picture" />
         <div class="text">
           <h3 class="student-name"> Bobby Brown </h3>
           <p id="achievement" class="info">
             Grad Level/Start Ranking
           </p>
+          <!-- here add achievement about the student -->
+
         </div>
       </div>
     </div>
+  </a>
 
 </section>

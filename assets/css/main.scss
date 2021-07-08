@@ -4,6 +4,17 @@
 
 @import "stocky";
 
+// changing default button bg-color
+.btn-property-del {
+  background-color: white !important;
+  padding: 0 !important;
+  text-align: left !important;
+  color: black !important;
+}
+.btn-property-del:hover {
+  background-color: white !important;
+}
+
 // parent dashboard
 
 // Welecome section
@@ -37,14 +48,10 @@
 }
 
 #students .card {
-  width: 50%;
+  width: 100%;
   background-color: #0b3f84;
   border-radius: 3rem;
   margin-top: 5%;
-}
-
-#students .container-fluid {
-  // padding: 0 7% 5% 7%;
 }
 
 #students .card-img-top {
@@ -53,14 +60,18 @@
 
 #students .text {
   position: relative;
-  top: 3rem;
-  left: 4rem;
+  top: 2rem;
+  left: 3rem;
   color: white;
 }
 
 .student-img {
   float: left;
-  border-radius: 50%;
+  background: -webkit-linear-gradient(left top, red 0%, blue 100%);
+  width: 200px;
+  height: 200px;
+  border-radius: 1000px;
+  padding: 10px;
 }
 
 .student-name {
@@ -71,7 +82,7 @@
 
 #achievement.info {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 // Cart Page start
@@ -110,7 +121,7 @@
 .card-price {
   display: flex;
   border: none;
-  background-color:white;
+  background-color: white;
   justify-content: flex-end;
   padding-right: 4rem;
 
@@ -173,4 +184,55 @@
 
 .tot {
   padding-right: 30%;
+}
+
+// Student dashboard
+
+#studentDash .btn-pos {
+  position: absolute;
+  right: 0;
+  bottom: 1.5rem;
+}
+
+#studentDash .betweenSection {
+  margin-bottom: 10%;
+}
+
+#studentDash .card {
+  box-shadow: 4px 3px 8px 1px #969696;
+  border-radius: 0 0 30px 30px;
+}
+
+#studentDash .card-body {
+  border-radius: 0 0 30px 30px;
+}
+
+
+#studentDash .card-title {
+  font-weight: bold;
+}
+
+#studentDash-profile .btn.fas {
+  font-size: 2rem;
+  background-color: white !important;
+  position: absolute;
+  right: 0;
+
+}
+
+#studentDash-profile .btn-pos {
+  bottom: 0;
+}
+
+#mycourses .card-body {
+  background-color: #0B3F84;
+  color: white;
+}
+
+
+.student-picture {
+  float: left;
+  width: 30%;
+  border-radius: 30%;
+
 }
