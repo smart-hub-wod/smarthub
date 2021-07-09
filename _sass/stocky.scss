@@ -807,8 +807,8 @@ ul.pager li a {
 
 .tr:hover {
   animation-name: example3;
-  animation-duration: 0.5s;
-  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
   @keyframes example3 {
     0% {
       transform: scale(1);
@@ -821,8 +821,8 @@ ul.pager li a {
 
 .sq:hover {
   animation-name: example4;
-  animation-duration: 0.5s;
-  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
   @keyframes example4 {
     0% {
       transform: scale(1);

@@ -8,7 +8,7 @@
       {% if sidewidget.title != null %}
       <!-- sidewidget title -->
       <div class="title-line text-center">
-        <p class="st-title">{{ page.title }}</p>
+        <p class="st-title">{{ page.title }} Module</p>
       </div>
       {% endif %}
     </div>
@@ -17,91 +17,38 @@
 </section>
 {% endif %}
 
-{% if sidewidget.iframe != null %}
-<section class="sidewidget d-none d-md-block">
-  <div class="row">
-    <div class="col-2"></div>
-    <div class="col-8">
-      <!-- sidewidget title -->
-      <div class="title-line text-center">
-        <p class="st-title">Social Feed</p>
-      </div>
-    </div>
-    <div class="col-2"></div>
-  </div>
-  {% for level1 in sidewidget.iframe %}
-  <div class="mb-4 text-center">
-    {{ level1.iframe }}
-  </div>
-  {% endfor %}
-</section>
-{% endif %}
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
 
-{% if sidewidget.nav != null %}
-<section class="sidewidget">
-  {% assign nav-item = sidewidget.nav %}
-  {% assign sidewidget-nav = site.data.st-menu.[{{nav-item}}] %}
-  <div class="row">
-    <div class="col-2"></div>
-    <div class="col-8">
-      <!-- sidewidget title -->
-      <div class="title-line text-center">
-        <p class="st-title">Navigation Menu</p>
-      </div>
-    </div>
-    <div class="col-2"></div>
-  </div>
-  <ul class="list-unstyled">
-    {% for column in sidewidget-nav %}
-    {% if column.option != null %}
-    {% for column1 in column.option %}
-    <!-- sidewidget navigation list -->
-    <li class="mb-2">
-    <a href="{{ column1.href }}">{{ column1.title }}</a>
-    </li>
-    {% endfor %}
-    {% endif %}
-    {% endfor %}
-  </ul>
-</section>
-{% endif %}
+<script>
+  const firebase = require("firebase");
+  // Required for side-effects
+  require("firebase/firestore");
+  var docRef = db.collection("courses").doc("computer-engineering");
 
-{% if sidewidget.recent-post == true %}
-<!-- recent post starts -->
-<section class="sidewidget recent-post">
-  <div class="row">
-    <div class="col-2"></div>
-    <div class="col-8">
-      <!-- sidewidget title -->
-      <div class="title-line text-center">
-        <p class="st-title">Recent Posts</p>
-      </div>
-    </div>
-    <div class="col-2"></div>
-  </div>
-    <div>
-      <ul>
-        {% for post in site.posts limit:3 reversed %}
-        <li>
-          <div class="recent-post-image">
-            <!-- recent-post image -->
-            <a href="{{ post.url }}">
-              <div class="sidewidget-image" style="background-image: url('{{ post.image }}');"></div>
-            </a>
-            <div class="button">
-              <!-- recent post title and link -->
-              <a href="{{ post.url }}">{{ post.title }}</a>
-              <!-- recent post read more link -->
-              <p><a href="{{ post.url }}" class="btn" role="button">Read More <i class="fas fa-long-arrow-alt-right ml-2"></i></a></p>
-            </div>
-          </div>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-</section>
-<!-- recent post ends -->
-{% endif %}
+  firebase.initializeApp({
+    apiKey: "AIzaSyCoQD_u406p8aUjp2Dp5Euo5KlCOKhcFZ4",
+    authDomain: "smart-hub-wod.firebaseapp.com",
+    projectId: "smart-hub-wod",
+  });
+
+  var db = firebase.firestore();
+
+  docRef.get().then((doc) => {
+      if (doc.exists) {
+          console.log("Document data:", doc.data());
+      } else {
+          // doc.data() will be undefined in this case
+          console.log("No such document!");
+      }
+  }).catch((error) => {
+      console.log("Error getting document:", error);
+  });
+</script>
+
+
+
+
 {% endfor %}
 
 <section class="sidewidget">

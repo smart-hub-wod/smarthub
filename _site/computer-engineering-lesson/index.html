@@ -21,7 +21,7 @@
 <meta property="twitter:image" content="http://localhost:4000/assets/images/products/computerEngineering.jpg" />
 <meta property="twitter:title" content="Computer Engineering" />
 <script type="application/ld+json">
-{"headline":"Computer Engineering","dateModified":"2021-07-07T00:00:00-04:00","datePublished":"2021-07-07T00:00:00-04:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/computer-engineering-lesson/"},"url":"http://localhost:4000/computer-engineering-lesson/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/stocky/smarthub-logo.png"},"name":"Bryce"},"author":{"@type":"Person","name":"Bryce"},"image":"http://localhost:4000/assets/images/products/computerEngineering.jpg","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.","@context":"https://schema.org"}</script>
+{"image":"http://localhost:4000/assets/images/products/computerEngineering.jpg","author":{"@type":"Person","name":"Bryce"},"@type":"BlogPosting","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/stocky/smarthub-logo.png"},"name":"Bryce"},"headline":"Computer Engineering","dateModified":"2021-07-07T00:00:00-04:00","url":"http://localhost:4000/computer-engineering-lesson/","datePublished":"2021-07-07T00:00:00-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/computer-engineering-lesson/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <!-- Required meta tags -->
@@ -373,7 +373,7 @@
       
       <!-- sidewidget title -->
       <div class="title-line text-center">
-        <p class="st-title">Computer Engineering</p>
+        <p class="st-title">Computer Engineering Module</p>
       </div>
       
     </div>
@@ -382,223 +382,37 @@
 </section>
 
 
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
 
-<section class="sidewidget d-none d-md-block">
-  <div class="row">
-    <div class="col-2"></div>
-    <div class="col-8">
-      <!-- sidewidget title -->
-      <div class="title-line text-center">
-        <p class="st-title">Social Feed</p>
-      </div>
-    </div>
-    <div class="col-2"></div>
-  </div>
-  
-  <div class="mb-4 text-center">
-    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fthescube%2F&tabs=timeline&width=280&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=112703925745338" width="280" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-  </div>
-  
-  <div class="mb-4 text-center">
-    <a class="twitter-timeline" data-width="280" data-height="500" data-dnt="true" href="https://twitter.com/scubedigital?ref_src=twsrc%5Etfw">Tweets by scubedigital</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </div>
-  
-</section>
+<script>
+  const firebase = require("firebase");
+  // Required for side-effects
+  require("firebase/firestore");
+  var docRef = db.collection("courses").doc("computer-engineering");
 
+  firebase.initializeApp({
+    apiKey: "AIzaSyCoQD_u406p8aUjp2Dp5Euo5KlCOKhcFZ4",
+    authDomain: "smart-hub-wod.firebaseapp.com",
+    projectId: "smart-hub-wod",
+  });
 
+  var db = firebase.firestore();
 
-<section class="sidewidget">
-  
-  
-  <div class="row">
-    <div class="col-2"></div>
-    <div class="col-8">
-      <!-- sidewidget title -->
-      <div class="title-line text-center">
-        <p class="st-title">Navigation Menu</p>
-      </div>
-    </div>
-    <div class="col-2"></div>
-  </div>
-  <ul class="list-unstyled">
-    
-    
-    
-    <!-- sidewidget navigation list -->
-    <li class="mb-2">
-    <a href="/full-width/">Full width</a>
-    </li>
-    
-    <!-- sidewidget navigation list -->
-    <li class="mb-2">
-    <a href="/typography/">Typography</a>
-    </li>
-    
-    <!-- sidewidget navigation list -->
-    <li class="mb-2">
-    <a href="/404/">404 Error Page</a>
-    </li>
-    
-    <!-- sidewidget navigation list -->
-    <li class="mb-2">
-    <a href="/features/">Features</a>
-    </li>
-    
-    <!-- sidewidget navigation list -->
-    <li class="mb-2">
-    <a href="/search-result/">Search + Results</a>
-    </li>
-    
-    
-    
-    
-    
-    <!-- sidewidget navigation list -->
-    <li class="mb-2">
-    <a href="/shop-archive/">Shop - archive</a>
-    </li>
-    
-    <!-- sidewidget navigation list -->
-    <li class="mb-2">
-    <a href="/software-engineering/">Shop - single</a>
-    </li>
-    
-    <!-- sidewidget navigation list -->
-    <li class="mb-2">
-    <a href="/checkout/">Checkout</a>
-    </li>
-    
-    <!-- sidewidget navigation list -->
-    <li class="mb-2">
-    <a href="/wishlist/">Wishlist</a>
-    </li>
-    
-    <!-- sidewidget navigation list -->
-    <li class="mb-2">
-    <a href="/forgot-password/">Forgot Password</a>
-    </li>
-    
-    <!-- sidewidget navigation list -->
-    <li class="mb-2">
-    <a href="/course-archive/">Lesson Plans</a>
-    </li>
-    
-    
-    
-    
-    
-    <!-- sidewidget navigation list -->
-    <li class="mb-2">
-    <a href="/blog-archive/">Blog - archive</a>
-    </li>
-    
-    <!-- sidewidget navigation list -->
-    <li class="mb-2">
-    <a href="/travel-1/">Blog - single</a>
-    </li>
-    
-    
-    
-    
-    
-    <!-- sidewidget navigation list -->
-    <li class="mb-2">
-    <a href="/login/">Login</a>
-    </li>
-    
-    <!-- sidewidget navigation list -->
-    <li class="mb-2">
-    <a href="/signup/">Signup</a>
-    </li>
-    
-    <!-- sidewidget navigation list -->
-    <li class="mb-2">
-    <a href="/checkout/">Checkout</a>
-    </li>
-    
-    <!-- sidewidget navigation list -->
-    <li class="mb-2">
-    <a href="/wishlist/">Wishlist</a>
-    </li>
-    
-    <!-- sidewidget navigation list -->
-    <li class="mb-2">
-    <a href="/forgot-password/">Forgot Password</a>
-    </li>
-    
-    
-    
-    
-    
-  </ul>
-</section>
+  docRef.get().then((doc) => {
+      if (doc.exists) {
+          console.log("Document data:", doc.data());
+      } else {
+          // doc.data() will be undefined in this case
+          console.log("No such document!");
+      }
+  }).catch((error) => {
+      console.log("Error getting document:", error);
+  });
+</script>
 
 
 
-<!-- recent post starts -->
-<section class="sidewidget recent-post">
-  <div class="row">
-    <div class="col-2"></div>
-    <div class="col-8">
-      <!-- sidewidget title -->
-      <div class="title-line text-center">
-        <p class="st-title">Recent Posts</p>
-      </div>
-    </div>
-    <div class="col-2"></div>
-  </div>
-    <div>
-      <ul>
-        
-        <li>
-          <div class="recent-post-image">
-            <!-- recent-post image -->
-            <a href="/computer-engineering-lesson/">
-              <div class="sidewidget-image" style="background-image: url('/assets/images/products/computerEngineering.jpg');"></div>
-            </a>
-            <div class="button">
-              <!-- recent post title and link -->
-              <a href="/computer-engineering-lesson/">Computer Engineering</a>
-              <!-- recent post read more link -->
-              <p><a href="/computer-engineering-lesson/" class="btn" role="button">Read More <i class="fas fa-long-arrow-alt-right ml-2"></i></a></p>
-            </div>
-          </div>
-        </li>
-        
-        <li>
-          <div class="recent-post-image">
-            <!-- recent-post image -->
-            <a href="/software-engineering/">
-              <div class="sidewidget-image" style="background-image: url('/assets/images/products/softwareEngineering.jpg');"></div>
-            </a>
-            <div class="button">
-              <!-- recent post title and link -->
-              <a href="/software-engineering/">Software Engineering</a>
-              <!-- recent post read more link -->
-              <p><a href="/software-engineering/" class="btn" role="button">Read More <i class="fas fa-long-arrow-alt-right ml-2"></i></a></p>
-            </div>
-          </div>
-        </li>
-        
-        <li>
-          <div class="recent-post-image">
-            <!-- recent-post image -->
-            <a href="/computer-engineering/">
-              <div class="sidewidget-image" style="background-image: url('/assets/images/products/computerEngineering.jpg');"></div>
-            </a>
-            <div class="button">
-              <!-- recent post title and link -->
-              <a href="/computer-engineering/">Computer Engineering</a>
-              <!-- recent post read more link -->
-              <p><a href="/computer-engineering/" class="btn" role="button">Read More <i class="fas fa-long-arrow-alt-right ml-2"></i></a></p>
-            </div>
-          </div>
-        </li>
-        
-      </ul>
-    </div>
-</section>
-<!-- recent post ends -->
 
 
 
