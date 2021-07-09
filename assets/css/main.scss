@@ -15,6 +15,56 @@
   background-color: white !important;
 }
 
+// Index carousel
+
+.home-post-category-section .title-text {
+  color: white;
+  font-weight: bold;
+}
+
+.home-post-category-section .items-align {
+  text-align: left;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding-top: 1rem;
+
+}
+
+
+.home-post-category-section .carousel-inner .text {
+  max-width: 25rem;
+  color: white;
+}
+
+// .home-post-category-section h1 h3 p {
+//   color: white !important;
+// }
+
+.home-post-category-section img {
+  float: left;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 5rem;
+  margin-right: 3rem;
+}
+
+.home-post-category-section .ref-name {
+  width: 10rem;
+  display: block;
+  clear:left;
+  font-style:italic;
+  font-weight:lighter;
+  margin: 0.63rem 0 0 16rem;
+  color: white;
+
+}
+
+.home-post-category-section .fas {
+  color: #BFDCE5;
+  font-size: 2rem;
+}
+
 // parent dashboard
 
 // Welecome section
