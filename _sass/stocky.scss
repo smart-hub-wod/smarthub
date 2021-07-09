@@ -771,31 +771,115 @@ ul.pager li a {
 
 .home-search-section {
   // background-image: url("/assets/images/stocky/home-bg.png");
-  // background-size: cover;
-  // background-position: 50%;
-  // background-repeat: no-repeat;
-  height: 450px;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  height: 350px;
   display: flex;
   align-items: center;
   text-align: center;
-  // background-color: #000000;
-  background-color: red;
+  background-color: #fff;
+  padding-top: 90px;
+  // background-color: red;
+  // animation-name: example;
+  // animation-duration: 4s;
+  // animation-iteration-count: infinite;
+
+  // @keyframes example {
+  //   0% {
+  //     background-color: red;
+  //   }
+  //   25% {
+  //     background-color: yellow;
+  //   }
+  //   50% {
+  //     background-color: blue;
+  //   }
+  //   100% {
+  //     background-color: red;
+  //   }
+  // }
+}
+
+.shapes-col {
+  margin: 10px;
+}
+
+.tr:hover {
+  animation-name: example3;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  @keyframes example3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(3);
+    }
+  }
+}
+
+.sq:hover {
+  animation-name: example4;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  @keyframes example4 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(3);
+    }
+  }
+}
+
+.sq:hover {
+  transform: scale(1.75);
+}
+
+.shapes-col > .row > * {
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+  opacity: 0.5;
+}
+
+.sq {
   animation-name: example;
   animation-duration: 4s;
   animation-iteration-count: infinite;
-
   @keyframes example {
     0% {
-      background-color: red;
+      transform: rotate(0deg);
     }
     25% {
-      background-color: yellow;
+      transform: rotate(120deg);
     }
     50% {
-      background-color: blue;
+      transform: rotate(240deg);
     }
     100% {
-      background-color: red;
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.tr {
+  animation-name: example2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  @keyframes example2 {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-120deg);
+    }
+    50% {
+      transform: rotate(-240deg);
+    }
+    100% {
+      transform: rotate(-360deg);
     }
   }
 }
