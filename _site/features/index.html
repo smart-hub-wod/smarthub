@@ -43,6 +43,28 @@
   <link rel="stylesheet" href="/assets/fontawesome/all.css">
   <!-- bootstrap jquery -->
   <script src="/assets/js/jquery-3.3.1.slim.min.js"></script>
+  <!-- <script type="module" src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+  <script src="/webpack/database.js"></script> -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script> -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <!-- <script>
+    // Your web app's Firebase configuration
+    // var firebaseConfig = {
+    //   apiKey: "AIzaSyCoQD_u406p8aUjp2Dp5Euo5KlCOKhcFZ4",
+    //   authDomain: "smart-hub-wod.firebaseapp.com",
+    //   projectId: "smart-hub-wod",
+    //   storageBucket: "smart-hub-wod.appspot.com",
+    // };
+    // // Initialize Firebase
+    // firebase.initializeApp(firebaseConfig);
+  </script> -->
+
 
 
 <!-- page title -->
@@ -1003,29 +1025,29 @@
       <form action="" method="post">
         <!-- email input field -->
         <div class="form-group">
-          <label for="email">Username or Email Address</label>
-          <input type="email" class="form-control" id="email_field" required>
+          <label for="email">Parent Email Address</label>
+          <input type="email" class="form-control" id="txtEmail" required>
         </div>
         <!-- password input field -->
         <div class="form-group">
           <label for="pwd">Password</label>
-          <input type="password" class="form-control" id="password_field" required>
+          <input type="password" class="form-control" id="txtPassword" required>
         </div>
         <div class="form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for=" Remember-Me"> Remember Me</label>
         </div>
         <!-- log-in button -->
-        <button type="submit" class="btn" onclick="login()">Log In</button>
+        <button class="btn btn-action" id="login_button">Log In</button>
+        <button class="btn btn-action" id="signup_button">Sign Up</button>
+        <button class="btn btn-action invisible" id="logout_button">Log Out</button>
         <p><a href="/forgot-password/">Forgot Password</a></p>
         <p><a href="/signup/">Register your account here</a></p>
       </form>
-      <div class="loggedin_div" id="user_div" style="display:none">
-        <h3>YAYYY! You successfully logged-in using Firebase.....</h3>
-      </div>
     </div>
   </div>
 </div>
+<script src="/webpack/auth.js"></script>
   </div>
 </section>
 
@@ -1544,6 +1566,7 @@
 <script type="text/javascript" src="/assets/js/jquery-latest.min.js"></script>
 <script type="text/javascript" src="/assets/fancybox/jquery.fancybox.pack.js"></script>
 <!-- fancy box script for gallery ends -->
+  
 <!-- bootstrap script -->
 <script src="/assets/js/popper.min.js"></script>
 <script src="/assets/js/bootstrap.min.js"></script>
