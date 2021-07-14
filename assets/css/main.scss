@@ -286,3 +286,27 @@
   border-radius: 30%;
 
 }
+
+// student PAOD portal starts!
+body#paod {
+  // or 52006A
+  background: linear-gradient(90deg, #7952B3, #FB7AFC);
+}
+
+.portal-container {
+  text-align: center;
+  margin: 10%;
+  background-color: #F7DBF0;
+}
+
+.portal-header {
+  background-color: #C6B4CE;
+  text-align: left;
+
+}
+
+.portal-header-text {
+  padding: 2px 5px;
+  background-color: none;
+
+}

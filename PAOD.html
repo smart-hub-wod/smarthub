@@ -1,0 +1,85 @@
+---
+title: "PAOD-student portal"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% include st-head.html%}
+
+
+<body id="paod">
+  <div class="portal-container">
+    <header class="portal-header">
+      <span class="portal-header-text">PAOD - Student Portal</span>
+    </header>
+    <div class="row">
+      <!-- left section starts -->
+      <div class="col-4" style="display: flex; flex-direction:column;">
+        <img class="student-img" src="../assets/images/stocky/img3.jpg" alt="student images">
+        <h1 class="name"> Jan Alleman </h1>
+        <h3 class="role"> Officer in Training </h3>
+        <!-- put the icons in for each of them -->
+        <button type="button"> Dashboard </button>
+        <button type="button"> Notifications </button>
+        <button type="button"> Progress </button>
+        <button type="button"> Grades </button>
+        <button type="button"> Calendar </button>
+        <button type="button"> Resources </button>
+        <button type="button"> Settings </button>
+      </div>
+      <!-- Student overview starts  -->
+      <div class="col-8">
+
+        <div class="title">
+          <h1> Student Overview </h1>
+          <p> Analystics for progress, grades, courses and more</p>
+        </div>
+
+        <div class="row">
+          
+          <div class="col-6">
+            <div class="card performanceStat">
+              <h3> performance Statistic </h3>
+              <hr>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+
+            <div class="RecentGrades">
+              <h3> Recent Grades</h3>
+              <div class="row">
+                <div class="col-8">
+                  <h4 class="grade-title"> Combat Training </h4>
+                </div>
+                <div class="col-4">
+                  <h4 class="grade"> 7.1 </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="notifications">
+              <h3> Notifications </h3>
+              <hr>
+              <div class="alert-warning alert">
+                <h3 class="this-is-an-alert"> General Alert </h3>
+                <p> Webtest #5 is now unlcoekd. Please visit the Resources section to view it. </p>
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
