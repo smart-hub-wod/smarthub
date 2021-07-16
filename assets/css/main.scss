@@ -291,17 +291,106 @@
 body#paod {
   // or 52006A
   background: linear-gradient(90deg, #7952B3, #FB7AFC);
+
+}
+
+#paod br {
+  border: solid grey;
+}
+
+#paod h3 {
+  text-align: left;
+}
+
+#paod p {
+  text-align: left;
+}
+
+#paod .btn {
+  background-color: #F7DBF0 !important;
+  border: none;
+  border-radius: 0;
+  color: grey;
+  font-weight: 600;
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+#paod .icon {
+  font-size: 2rem;
+  // padding-left: 0.3rem;
+  padding-right: 0.8rem;
+
+}
+
+#paod .btn:hover {
+  background-color: #dbd4da !important;
+
+}
+
+.toCol {
+  display: flex;
+  flex-direction:column;
+
+}
+
+.toCent {
+  align-items: center;
+}
+
+#paod .student-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  border: solid white;
+  border-width: 10px;
+  background: none;
+
+}
+
+
+#paod .btns-div {
+  justify-content: flex-start;
+}
+
+#paod .name {
+  font-size: 2rem;
+
+}
+
+#paod .role-text {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+#paod .title {
+  text-align: left;
+}
+
+// row adjust
+
+#paod .col-9{
+  background-color: white;
+  overflow-x: hidden;
+
+}
+
+#paod .row {
+  margin-right: 0;
+
 }
 
 .portal-container {
   text-align: center;
   margin: 10%;
   background-color: #F7DBF0;
+  border-radius: 10px;
 }
 
 .portal-header {
   background-color: #C6B4CE;
   text-align: left;
+  border-radius: 10px 10px 0 0;
 
 }
 
@@ -309,4 +398,44 @@ body#paod {
   padding: 2px 5px;
   background-color: none;
 
+
+}
+
+
+#setting.btn {
+  border-radius: 0 0 0 10px;
+  padding-bottom: 1rem;
+}
+
+// Each functionality sections
+
+.info {
+  box-shadow: 1px 1px 7px 3px #f7dbf0;
+}
+
+
+.performanceStat {
+
+}
+
+.stat-img {
+  
+}
+
+.recentGrades {
+
+}
+
+.notifications {
+
+}
+
+// Changing default alert-design
+#paod .alert {
+
+}
+
+#paod .alert-warning {
+  background-color: none;
+  border: none;
 }
