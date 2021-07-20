@@ -1,4 +1,9 @@
 (function () {
+    import firebase from "firebase/app";
+    // import "firebase/firestore";
+    // require("firebase/firestore");
+
+
     const firebaseConfig = {
         apiKey: "AIzaSyCoQD_u406p8aUjp2Dp5Euo5KlCOKhcFZ4",
         authDomain: "smart-hub-wod.firebaseapp.com",
