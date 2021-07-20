@@ -1,0 +1,11 @@
+menu:
+  - title: profile
+    href: "#"
+  - title: past purchases
+    href: "#"
+  - title: notifications
+    href: "#"
+  - title: help center
+    href: "#"
+  - title: sign out
+    href: "/login/"

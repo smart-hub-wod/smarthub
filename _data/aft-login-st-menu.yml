@@ -1,0 +1,33 @@
+menu:
+  # Not sure how the navbar would be currently but it can be achieve!
+  # Every parent has different data-base for their child
+  # maybe making the nav bar similar to Couresa? put most of things into Accout?
+- title: Students
+  href: "../parDash/"
+  option:
+  # direct each students to their own PAOD and student dashboard
+    - title: "Bobby Brown"
+      image: "https://th.bing.com/th/id/OIP.R4UQspZW7oAAq4fbbCbixgHaGf?w=189&h=180&c=7&o=5&pid=1.7"
+      # can make level3 down below depending on how to blit the acheivement
+      achievement: "blank"
+      href: "../PAOD/"
+    - title: "Tammy Brown"
+      image: "https://th.bing.com/th/id/OIP.i37_pFDoJqaZrawomc_mqwHaE7?w=227&h=180&c=7&o=5&pid=1.7"
+      achievement: "blank"
+      href: "#"
+- title: Courses
+# link for each student to their dash borad
+  href: "../student-dash/"
+  option:
+  # should be able to get the courses from each student here
+    - title: Software Engineering
+      href: "#"
+    - title: Computer Engineering
+      href: "#"
+    - title: Course3
+      href: "#"
+    - title: Course4
+      href: "#"
+- title: Store
+  href: "/shop-archive/"
+# more things to add into the navbar from here

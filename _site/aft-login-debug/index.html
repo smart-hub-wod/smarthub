@@ -4,19 +4,19 @@
 <head>
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Forgot-password | Smart Hub</title>
+<title>debug for after login navbar | Smart Hub</title>
 <meta name="generator" content="Jekyll v3.8.7" />
-<meta property="og:title" content="Forgot-password" />
+<meta property="og:title" content="debug for after login navbar" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An Educational Platform" />
 <meta property="og:description" content="An Educational Platform" />
-<link rel="canonical" href="http://localhost:4000/forgot-password/" />
-<meta property="og:url" content="http://localhost:4000/forgot-password/" />
+<link rel="canonical" href="http://localhost:4000/aft-login-debug/" />
+<meta property="og:url" content="http://localhost:4000/aft-login-debug/" />
 <meta property="og:site_name" content="Smart Hub" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Forgot-password" />
+<meta property="twitter:title" content="debug for after login navbar" />
 <script type="application/ld+json">
-{"headline":"Forgot-password","@type":"WebPage","url":"http://localhost:4000/forgot-password/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/stocky/smarthub-logo.png"}},"description":"An Educational Platform","@context":"https://schema.org"}</script>
+{"headline":"debug for after login navbar","@type":"WebPage","url":"http://localhost:4000/aft-login-debug/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/stocky/smarthub-logo.png"}},"description":"An Educational Platform","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <!-- Required meta tags -->
@@ -70,7 +70,7 @@
 
 
 <!-- page title -->
-  <title>Forgot-password</title>
+  <title>debug for after login navbar</title>
 </head>
 <!-- head section ends -->
 
@@ -80,8 +80,12 @@
   <!-- header  -->
   
 
+<!-- Need to replace the search bar -->
+<!-- Need to fix the dropdown for mobile version  -->
+<!-- design the dropdown for account menu -->
+
 <!-- header section starts -->
-<div class="header fixed-top">
+<div id="login-nav" class="header fixed-top">
   <div class="navbar navbar-expand-lg mainmenu p-md-0">
     <div class="container-fluid">
     <!-- logo for your website -->
@@ -99,10 +103,19 @@
       </div>
       <ul class="navbar-nav">
         <li class="dropdown">
-        <a href="#" class="nav-link" data-toggle="dropdown">Account <i class="fas fa-angle-down"></i></a>
+        <a href="#" class="nav-link" data-toggle="dropdown"> Account <i class="fas fa-angle-down"></i></a>
         <ul class="dropdown-menu list-unstyled">
-          <li><a href="/login/">Login</a></li>
-          <li><a href="/signup/">Signup</a></li>
+          
+          <li><a href="#"> profile</a></li>
+          
+          <li><a href="#"> past purchases</a></li>
+          
+          <li><a href="#"> notifications</a></li>
+          
+          <li><a href="#"> help center</a></li>
+          
+          <li><a href="/login/"> sign out</a></li>
+          
         </ul>
         </li>
         <li class="cart"><a href="/CartPage/" class="nav-link"><i class="fas fa-shopping-cart"></i></a></li>
@@ -118,65 +131,43 @@
         </span>
       </button>
       <div class="mobile-header-widget d-lg-none">
-        <a href="/login/" class="mr-2"><i class="fas fa-user-circle"></i></a>
+        <!-- here gotta make the dropdown for account section  -->
+        <a href="/login/"> <i class="fas fa-user-circle"></i> </a>
+
         <a href="/checkout/" class="cart"><i class="fas fa-shopping-cart"></i></a>
       </div>
     </div>
 
     <!-- header main menu starts -->
-    <nav class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+    <nav class="collapse navbar-collapse" id="navbarNavDropdown" style="padding-left: 5%;">
       <ul class="navbar-nav">
         
         
         <li class="dropdown d-lg-none">
           <a style="position:absolute; right:0;" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"></a>
-          <a class="nav-link" href="/shop-archive/">Courses</a>
+          <a class="nav-link" href="../parDash/">Students</a>
           <ul class="dropdown-menu">
             
             <li>
-              <a href="/full-width/">Full width</a>
+              <a href="../PAOD/">Bobby Brown</a>
             </li>
             
             <li>
-              <a href="/typography/">Typography</a>
-            </li>
-            
-            <li>
-              <a href="/404/">404 Error Page</a>
-            </li>
-            
-            <li>
-              <a href="/features/">Features</a>
-            </li>
-            
-            <li>
-              <a href="/search-result/">Search + Results</a>
+              <a href="#">Tammy Brown</a>
             </li>
             
           </ul>
         </li>
         <li class="dropdown d-none d-lg-block">
-          <a class="nav-link" href="/shop-archive/">Courses <i class="fas fa-angle-down"></i></a>
+          <a class="nav-link" href="../parDash/">Students <i class="fas fa-angle-down"></i></a>
           <ul class="dropdown-menu">
             
             <li>
-              <a href="/full-width/">Full width</a>
+              <a href="../PAOD/">Bobby Brown</a>
             </li>
             
             <li>
-              <a href="/typography/">Typography</a>
-            </li>
-            
-            <li>
-              <a href="/404/">404 Error Page</a>
-            </li>
-            
-            <li>
-              <a href="/features/">Features</a>
-            </li>
-            
-            <li>
-              <a href="/search-result/">Search + Results</a>
+              <a href="#">Tammy Brown</a>
             </li>
             
           </ul>
@@ -186,149 +177,45 @@
         
         <li class="dropdown d-lg-none">
           <a style="position:absolute; right:0;" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"></a>
-          <a class="nav-link" href="#">Store</a>
+          <a class="nav-link" href="../student-dash/">Courses</a>
           <ul class="dropdown-menu">
             
             <li>
-              <a href="/shop-archive/">Shop - archive</a>
+              <a href="#">Software Engineering</a>
             </li>
             
             <li>
-              <a href="/software-engineering/">Shop - single</a>
+              <a href="#">Computer Engineering</a>
             </li>
             
             <li>
-              <a href="/checkout/">Checkout</a>
+              <a href="#">Course3</a>
             </li>
             
             <li>
-              <a href="/wishlist/">Wishlist</a>
-            </li>
-            
-            <li>
-              <a href="/forgot-password/">Forgot Password</a>
-            </li>
-            
-            <li>
-              <a href="/course-archive/">Lesson Plans</a>
+              <a href="#">Course4</a>
             </li>
             
           </ul>
         </li>
         <li class="dropdown d-none d-lg-block">
-          <a class="nav-link" href="#">Store <i class="fas fa-angle-down"></i></a>
+          <a class="nav-link" href="../student-dash/">Courses <i class="fas fa-angle-down"></i></a>
           <ul class="dropdown-menu">
             
             <li>
-              <a href="/shop-archive/">Shop - archive</a>
+              <a href="#">Software Engineering</a>
             </li>
             
             <li>
-              <a href="/software-engineering/">Shop - single</a>
+              <a href="#">Computer Engineering</a>
             </li>
             
             <li>
-              <a href="/checkout/">Checkout</a>
+              <a href="#">Course3</a>
             </li>
             
             <li>
-              <a href="/wishlist/">Wishlist</a>
-            </li>
-            
-            <li>
-              <a href="/forgot-password/">Forgot Password</a>
-            </li>
-            
-            <li>
-              <a href="/course-archive/">Lesson Plans</a>
-            </li>
-            
-          </ul>
-        </li>
-        
-        
-        
-        <li class="dropdown d-lg-none">
-          <a style="position:absolute; right:0;" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"></a>
-          <a class="nav-link" href="#">blog</a>
-          <ul class="dropdown-menu">
-            
-            <li>
-              <a href="/blog-archive/">Blog - archive</a>
-            </li>
-            
-            <li>
-              <a href="/travel-1/">Blog - single</a>
-            </li>
-            
-          </ul>
-        </li>
-        <li class="dropdown d-none d-lg-block">
-          <a class="nav-link" href="#">blog <i class="fas fa-angle-down"></i></a>
-          <ul class="dropdown-menu">
-            
-            <li>
-              <a href="/blog-archive/">Blog - archive</a>
-            </li>
-            
-            <li>
-              <a href="/travel-1/">Blog - single</a>
-            </li>
-            
-          </ul>
-        </li>
-        
-        
-        
-        <li class="dropdown d-lg-none">
-          <a style="position:absolute; right:0;" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"></a>
-          <a class="nav-link" href="#">Member</a>
-          <ul class="dropdown-menu">
-            
-            <li>
-              <a href="/login/">Login</a>
-            </li>
-            
-            <li>
-              <a href="/signup/">Signup</a>
-            </li>
-            
-            <li>
-              <a href="/checkout/">Checkout</a>
-            </li>
-            
-            <li>
-              <a href="/wishlist/">Wishlist</a>
-            </li>
-            
-            <li>
-              <a href="/forgot-password/">Forgot Password</a>
-            </li>
-            
-          </ul>
-        </li>
-        <li class="dropdown d-none d-lg-block">
-          <a class="nav-link" href="#">Member <i class="fas fa-angle-down"></i></a>
-          <ul class="dropdown-menu">
-            
-            <li>
-              <a href="/login/">Login</a>
-            </li>
-            
-            <li>
-              <a href="/signup/">Signup</a>
-            </li>
-            
-            <li>
-              <a href="/checkout/">Checkout</a>
-            </li>
-            
-            <li>
-              <a href="/wishlist/">Wishlist</a>
-            </li>
-            
-            <li>
-              <a href="/forgot-password/">Forgot Password</a>
+              <a href="#">Course4</a>
             </li>
             
           </ul>
@@ -337,12 +224,13 @@
         
         
         <li>
-          <a class="nav-link" href="/contact/">Contact</a>
+          <a class="nav-link" href="/shop-archive/">Store</a>
         </li>
         
         
       </ul>
     </nav>
+
     <!-- main menu ends -->
     </div>
   </div>
@@ -353,7 +241,7 @@
   <div class="container">
     <div class="d-sm-flex justify-content-between align-items-center">
       <div>
-        <!-- <h1 class="choicetitle">Forgot-password</h1> -->
+        <!-- <h1 class="choicetitle">debug for after login navbar</h1> -->
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
             <li class="breadcrumb-item choicetitle" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -361,7 +249,7 @@
               <meta itemprop="position" content="1" />
             </li>
             <li class="breadcrumb-item active text-dark" aria-current="page" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <span itemprop="name">Forgot-password</span>
+              <span itemprop="name">debug for after login navbar</span>
               <meta itemprop="position" content="2" />
             </li>
           </ol>
@@ -379,33 +267,11 @@
   <!-- content -->
   <section class="st-section">
     <div class="container">
-      <!-- forgot-password starts -->
-<div class="st-forgot-password">
-  <h2 class="text-center mb-5">Forgot password</h2>
-  <div class="row justify-content-center">
-    <div class="col-md-4 col-sm-12">
-      <!-- form-starts -->
-      <form action="" method="post">
-        <!-- email input field starts -->
-        <div class="form-group">
-          <input type="email" class="form-control" placeholder="Email" required>
-        </div>
-        <!-- email input field ends -->
-        <!-- form button starts -->
-        <div class="get-code-button">
-          <button type="submit" class="btn">Send me reset link</button>
-        </div>
-        <!-- form button ends -->
-      </form>
-      <!-- form-starts -->
-    </div>
-  </div>
-</div>
-<!-- forgot-password ends -->
-
+      <h1> hello world! </h1>
 
     </div>
   </section>
+  <!-- we can always remove the footer and add the ending tags -->
   <!-- footer -->
   
 

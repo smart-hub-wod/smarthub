@@ -4,6 +4,12 @@
 
 @import "stocky";
 
+// Designing the after login navar
+#login-nav .dropdown {
+
+
+}
+
 // changing default button bg-color
 .btn-property-del {
   background-color: white !important;
@@ -372,6 +378,7 @@ body#paod {
 #paod .col-9{
   background-color: white;
   overflow-x: hidden;
+  border-radius: 0 0 10px 0;
 
 }
 
@@ -382,7 +389,7 @@ body#paod {
 
 .portal-container {
   text-align: center;
-  margin: 10%;
+  margin: 5% 10%;
   background-color: #F7DBF0;
   border-radius: 10px;
 }

@@ -4,8 +4,12 @@
 {% assign width = "150px" %}
 {% endif %}
 
+<!-- Need to replace the search bar -->
+<!-- Need to fix the dropdown for mobile version  -->
+<!-- design the dropdown for account menu -->
+
 <!-- header section starts -->
-<div class="header fixed-top">
+<div id="login-nav" class="header fixed-top">
   <div class="navbar navbar-expand-lg mainmenu p-md-0">
     <div class="container-fluid">
     <!-- logo for your website -->
@@ -23,10 +27,11 @@
       </div>
       <ul class="navbar-nav">
         <li class="dropdown">
-        <a href="#" class="nav-link" data-toggle="dropdown">Account <i class="fas fa-angle-down"></i></a>
+        <a href="#" class="nav-link" data-toggle="dropdown"> Account <i class="fas fa-angle-down"></i></a>
         <ul class="dropdown-menu list-unstyled">
-          <li><a href="/login/">Login</a></li>
-          <li><a href="/signup/">Signup</a></li>
+          {% for level1 in site.data.st-user-menu.menu %}
+          <li><a href="{{level1.href}}"> {{level1.title}}</a></li>
+          {% endfor %}
         </ul>
         </li>
         <li class="cart"><a href="/CartPage/" class="nav-link"><i class="fas fa-shopping-cart"></i></a></li>
@@ -42,15 +47,17 @@
         </span>
       </button>
       <div class="mobile-header-widget d-lg-none">
-        <a href="/login/" class="mr-2"><i class="fas fa-user-circle"></i></a>
+        <!-- here gotta make the dropdown for account section  -->
+        <a href="/login/"> <i class="fas fa-user-circle"></i> </a>
+
         <a href="/checkout/" class="cart"><i class="fas fa-shopping-cart"></i></a>
       </div>
     </div>
 
     <!-- header main menu starts -->
-    <nav class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+    <nav class="collapse navbar-collapse" id="navbarNavDropdown" style="padding-left: 5%;">
       <ul class="navbar-nav">
-        {% for level1 in site.data.st-menu.menu %}
+        {% for level1 in site.data.aft-login-st-menu.menu %}
         {% if level1.option != null %}
         <li class="dropdown d-lg-none">
           <a style="position:absolute; right:0;" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"></a>
@@ -81,6 +88,7 @@
         {% endfor %}
       </ul>
     </nav>
+
     <!-- main menu ends -->
     </div>
   </div>

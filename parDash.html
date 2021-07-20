@@ -3,6 +3,9 @@ layout: full-width
 title: "Parent Dashboard"
 ---
 
+<!-- make different permalink for different student? yes, that I can use
+the permalink variable to blit the student's name? -->
+
 <div class="welcome">
   <div class="title-line">
     <h2 class="st-title">Parent Dashboard</h2>
@@ -30,22 +33,35 @@ title: "Parent Dashboard"
 
 <section id="students">
   <h2 class="mystudents">My Students</h2>
-  <!--  for real gotta loop thru this thing -->
-  <!-- how will the student profile be? each student should have different?  -->
+  <!--  for real gotta loop thru this thing  use data stored in aft-login-st-menu -->
+  <!-- the students' name can be accessed by '''.title''' -->
+
+  {% for level1 in site.data.aft-login-st-menu.menu %}
+  {% if level1.title == "Students"%}
+  {% for level2 in level1.option %}
   <a href="../student-dash" role="button" class="btn btn-property-del" style="width:600px;">
     <div class="card">
       <div class="card-body">
-        <img class="student-img" src="https://th.bing.com/th/id/OIP.R4UQspZW7oAAq4fbbCbixgHaGf?w=189&h=180&c=7&o=5&pid=1.7" alt="student picture" />
+        <img class="student-img" src="{{level2.image}}" alt="student picture" />
         <div class="text">
-          <h3 class="student-name"> Bobby Brown </h3>
+          <h3 class="student-name"> {{level2.title}} </h3>
           <p id="achievement" class="info">
             Grad Level/Start Ranking
           </p>
-          <!-- here add achievement about the student -->
+
+          <p>
+            <!-- here add achievement about the student -->
+            {{level2.achievement}}
+          </p>
 
         </div>
       </div>
     </div>
   </a>
+  {% endfor %}
+  {% endif %}
+  {% endfor %}
+
+
 
 </section>

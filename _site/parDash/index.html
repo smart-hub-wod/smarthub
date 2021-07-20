@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Parent Dashboard" />
 <script type="application/ld+json">
-{"@type":"WebPage","description":"An Educational Platform","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/stocky/smarthub-logo.png"}},"headline":"Parent Dashboard","url":"http://localhost:4000/parDash/","@context":"https://schema.org"}</script>
+{"headline":"Parent Dashboard","@type":"WebPage","url":"http://localhost:4000/parDash/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/stocky/smarthub-logo.png"}},"description":"An Educational Platform","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <!-- Required meta tags -->
@@ -32,7 +32,7 @@
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/stocky/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;800&display=swap" rel="stylesheet">
   <!-- google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <!-- main css -->
@@ -66,7 +66,7 @@
     // // Initialize Firebase
     // firebase.initializeApp(firebaseConfig);
   </script> -->
- 
+
 
 
 <!-- page title -->
@@ -118,7 +118,7 @@
         </span>
       </button>
       <div class="mobile-header-widget d-lg-none">
-        <a href="/login/" class="mr-2"><i class="fas fa-user-circle"></i></a> -->
+        <a href="/login/" class="mr-2"><i class="fas fa-user-circle"></i></a>
         <a href="/checkout/" class="cart"><i class="fas fa-shopping-cart"></i></a>
       </div>
     </div>
@@ -379,7 +379,10 @@
   <!-- content -->
   <section class="st-section">
     <div class="container">
-      <div class="welcome">
+      <!-- make different permalink for different student? yes, that I can use
+the permalink variable to blit the student's name? -->
+
+<div class="welcome">
   <div class="title-line">
     <h2 class="st-title">Parent Dashboard</h2>
   </div>
@@ -435,8 +438,12 @@
 
 <section id="students">
   <h2 class="mystudents">My Students</h2>
-  <!--  for real gotta loop thru this thing -->
-  <!-- how will the student profile be? each student should have different?  -->
+  <!--  for real gotta loop thru this thing  use data stored in aft-login-st-menu -->
+  <!-- the students' name can be accessed by '''.title''' -->
+
+  
+  
+  
   <a href="../student-dash" role="button" class="btn btn-property-del" style="width:600px;">
     <div class="card">
       <div class="card-body">
@@ -446,12 +453,45 @@
           <p id="achievement" class="info">
             Grad Level/Start Ranking
           </p>
-          <!-- here add achievement about the student -->
+
+          <p>
+            <!-- here add achievement about the student -->
+            blank
+          </p>
 
         </div>
       </div>
     </div>
   </a>
+  
+  <a href="../student-dash" role="button" class="btn btn-property-del" style="width:600px;">
+    <div class="card">
+      <div class="card-body">
+        <img class="student-img" src="https://th.bing.com/th/id/OIP.i37_pFDoJqaZrawomc_mqwHaE7?w=227&h=180&c=7&o=5&pid=1.7" alt="student picture" />
+        <div class="text">
+          <h3 class="student-name"> Tammy Brown </h3>
+          <p id="achievement" class="info">
+            Grad Level/Start Ranking
+          </p>
+
+          <p>
+            <!-- here add achievement about the student -->
+            blank
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </a>
+  
+  
+  
+  
+  
+  
+  
+
+
 
 </section>
 
