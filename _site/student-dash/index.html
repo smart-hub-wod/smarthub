@@ -80,8 +80,11 @@
   <!-- header  -->
   
 
+<!-- Need to replace the search bar -->
+<!-- Need to fix the dropdown for mobile version  -->
+
 <!-- header section starts -->
-<div class="header fixed-top">
+<div id="login-nav" class="header fixed-top">
   <div class="navbar navbar-expand-lg mainmenu p-md-0">
     <div class="container-fluid">
     <!-- logo for your website -->
@@ -99,10 +102,19 @@
       </div>
       <ul class="navbar-nav">
         <li class="dropdown">
-        <a href="#" class="nav-link" data-toggle="dropdown">Account <i class="fas fa-angle-down"></i></a>
+        <a href="#" class="nav-link" data-toggle="dropdown"> <i style="font-size: 1rem;" class="far fa-user mr-1"></i> Profile <i class="fas fa-angle-down"></i></a>
         <ul class="dropdown-menu list-unstyled">
-          <li><a href="/login/">Login</a></li>
-          <li><a href="/signup/">Signup</a></li>
+          
+          <li><a href="#"> profile</a></li>
+          
+          <li><a href="#"> past purchases</a></li>
+          
+          <li><a href="#"> notifications</a></li>
+          
+          <li><a href="#"> help center</a></li>
+          
+          <li><a href="/login/"> sign out</a></li>
+          
         </ul>
         </li>
         <li class="cart"><a href="/CartPage/" class="nav-link"><i class="fas fa-shopping-cart"></i></a></li>
@@ -118,65 +130,43 @@
         </span>
       </button>
       <div class="mobile-header-widget d-lg-none">
-        <a href="/login/" class="mr-2"><i class="fas fa-user-circle"></i></a>
+        <!-- here gotta make the dropdown for account section  -->
+        <a href="/login/"> <i class="fas fa-user-circle"></i> </a>
+
         <a href="/checkout/" class="cart"><i class="fas fa-shopping-cart"></i></a>
       </div>
     </div>
 
     <!-- header main menu starts -->
-    <nav class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+    <nav class="collapse navbar-collapse" id="navbarNavDropdown" style="padding-left: 5%;">
       <ul class="navbar-nav">
         
         
         <li class="dropdown d-lg-none">
           <a style="position:absolute; right:0;" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"></a>
-          <a class="nav-link" href="/shop-archive/">Courses</a>
+          <a class="nav-link" href="../parDash/">Students</a>
           <ul class="dropdown-menu">
             
             <li>
-              <a href="/full-width/">Full width</a>
+              <a href="../PAOD/">Bobby Brown</a>
             </li>
             
             <li>
-              <a href="/typography/">Typography</a>
-            </li>
-            
-            <li>
-              <a href="/404/">404 Error Page</a>
-            </li>
-            
-            <li>
-              <a href="/features/">Features</a>
-            </li>
-            
-            <li>
-              <a href="/search-result/">Search + Results</a>
+              <a href="#">Tammy Brown</a>
             </li>
             
           </ul>
         </li>
         <li class="dropdown d-none d-lg-block">
-          <a class="nav-link" href="/shop-archive/">Courses <i class="fas fa-angle-down"></i></a>
+          <a class="nav-link" href="../parDash/">Students <i class="fas fa-angle-down"></i></a>
           <ul class="dropdown-menu">
             
             <li>
-              <a href="/full-width/">Full width</a>
+              <a href="../PAOD/">Bobby Brown</a>
             </li>
             
             <li>
-              <a href="/typography/">Typography</a>
-            </li>
-            
-            <li>
-              <a href="/404/">404 Error Page</a>
-            </li>
-            
-            <li>
-              <a href="/features/">Features</a>
-            </li>
-            
-            <li>
-              <a href="/search-result/">Search + Results</a>
+              <a href="#">Tammy Brown</a>
             </li>
             
           </ul>
@@ -186,149 +176,45 @@
         
         <li class="dropdown d-lg-none">
           <a style="position:absolute; right:0;" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"></a>
-          <a class="nav-link" href="#">Store</a>
+          <a class="nav-link" href="../student-dash/">Courses</a>
           <ul class="dropdown-menu">
             
             <li>
-              <a href="/shop-archive/">Shop - archive</a>
+              <a href="#">Software Engineering</a>
             </li>
             
             <li>
-              <a href="/software-engineering/">Shop - single</a>
+              <a href="#">Computer Engineering</a>
             </li>
             
             <li>
-              <a href="/checkout/">Checkout</a>
+              <a href="#">Course3</a>
             </li>
             
             <li>
-              <a href="/wishlist/">Wishlist</a>
-            </li>
-            
-            <li>
-              <a href="/forgot-password/">Forgot Password</a>
-            </li>
-            
-            <li>
-              <a href="/course-archive/">Lesson Plans</a>
+              <a href="#">Course4</a>
             </li>
             
           </ul>
         </li>
         <li class="dropdown d-none d-lg-block">
-          <a class="nav-link" href="#">Store <i class="fas fa-angle-down"></i></a>
+          <a class="nav-link" href="../student-dash/">Courses <i class="fas fa-angle-down"></i></a>
           <ul class="dropdown-menu">
             
             <li>
-              <a href="/shop-archive/">Shop - archive</a>
+              <a href="#">Software Engineering</a>
             </li>
             
             <li>
-              <a href="/software-engineering/">Shop - single</a>
+              <a href="#">Computer Engineering</a>
             </li>
             
             <li>
-              <a href="/checkout/">Checkout</a>
+              <a href="#">Course3</a>
             </li>
             
             <li>
-              <a href="/wishlist/">Wishlist</a>
-            </li>
-            
-            <li>
-              <a href="/forgot-password/">Forgot Password</a>
-            </li>
-            
-            <li>
-              <a href="/course-archive/">Lesson Plans</a>
-            </li>
-            
-          </ul>
-        </li>
-        
-        
-        
-        <li class="dropdown d-lg-none">
-          <a style="position:absolute; right:0;" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"></a>
-          <a class="nav-link" href="#">blog</a>
-          <ul class="dropdown-menu">
-            
-            <li>
-              <a href="/blog-archive/">Blog - archive</a>
-            </li>
-            
-            <li>
-              <a href="/travel-1/">Blog - single</a>
-            </li>
-            
-          </ul>
-        </li>
-        <li class="dropdown d-none d-lg-block">
-          <a class="nav-link" href="#">blog <i class="fas fa-angle-down"></i></a>
-          <ul class="dropdown-menu">
-            
-            <li>
-              <a href="/blog-archive/">Blog - archive</a>
-            </li>
-            
-            <li>
-              <a href="/travel-1/">Blog - single</a>
-            </li>
-            
-          </ul>
-        </li>
-        
-        
-        
-        <li class="dropdown d-lg-none">
-          <a style="position:absolute; right:0;" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"></a>
-          <a class="nav-link" href="#">Member</a>
-          <ul class="dropdown-menu">
-            
-            <li>
-              <a href="/login/">Login</a>
-            </li>
-            
-            <li>
-              <a href="/signup/">Signup</a>
-            </li>
-            
-            <li>
-              <a href="/checkout/">Checkout</a>
-            </li>
-            
-            <li>
-              <a href="/wishlist/">Wishlist</a>
-            </li>
-            
-            <li>
-              <a href="/forgot-password/">Forgot Password</a>
-            </li>
-            
-          </ul>
-        </li>
-        <li class="dropdown d-none d-lg-block">
-          <a class="nav-link" href="#">Member <i class="fas fa-angle-down"></i></a>
-          <ul class="dropdown-menu">
-            
-            <li>
-              <a href="/login/">Login</a>
-            </li>
-            
-            <li>
-              <a href="/signup/">Signup</a>
-            </li>
-            
-            <li>
-              <a href="/checkout/">Checkout</a>
-            </li>
-            
-            <li>
-              <a href="/wishlist/">Wishlist</a>
-            </li>
-            
-            <li>
-              <a href="/forgot-password/">Forgot Password</a>
+              <a href="#">Course4</a>
             </li>
             
           </ul>
@@ -337,12 +223,13 @@
         
         
         <li>
-          <a class="nav-link" href="/contact/">Contact</a>
+          <a class="nav-link" href="/shop-archive/">Store</a>
         </li>
         
         
       </ul>
     </nav>
+
     <!-- main menu ends -->
     </div>
   </div>
@@ -545,6 +432,7 @@
 
     </div>
   </section>
+  <!-- we can always remove the footer and add the ending tags -->
   <!-- footer -->
   
 
@@ -978,7 +866,7 @@
 <script type="text/javascript" src="/assets/js/jquery-latest.min.js"></script>
 <script type="text/javascript" src="/assets/fancybox/jquery.fancybox.pack.js"></script>
 <!-- fancy box script for gallery ends -->
-  
+
 <!-- bootstrap script -->
 <script src="/assets/js/popper.min.js"></script>
 <script src="/assets/js/bootstrap.min.js"></script>
@@ -1044,6 +932,11 @@ $(document).ready(function() {
   });
 });
 </script>
+
+<!-- adding jsfile for different pages -->
+
+
+
 
 </body>
 <!-- body section ends -->

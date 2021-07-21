@@ -1,0 +1,5 @@
+menu:
+  - title: Cart Page
+    href: "../page-js-files/CartPage.js"
+
+# add js files here, make sure to make the title same as the title of the page

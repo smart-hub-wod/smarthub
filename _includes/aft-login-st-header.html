@@ -6,7 +6,6 @@
 
 <!-- Need to replace the search bar -->
 <!-- Need to fix the dropdown for mobile version  -->
-<!-- design the dropdown for account menu -->
 
 <!-- header section starts -->
 <div id="login-nav" class="header fixed-top">
@@ -27,7 +26,7 @@
       </div>
       <ul class="navbar-nav">
         <li class="dropdown">
-        <a href="#" class="nav-link" data-toggle="dropdown"> Account <i class="fas fa-angle-down"></i></a>
+        <a href="#" class="nav-link" data-toggle="dropdown"> <i style="font-size: 1rem;" class="far fa-user mr-1"></i> Profile <i class="fas fa-angle-down"></i></a>
         <ul class="dropdown-menu list-unstyled">
           {% for level1 in site.data.st-user-menu.menu %}
           <li><a href="{{level1.href}}"> {{level1.title}}</a></li>

@@ -312,16 +312,6 @@ body#paod {
   text-align: left;
 }
 
-#paod .btn {
-  background-color: #F7DBF0 !important;
-  border: none;
-  border-radius: 0;
-  color: grey;
-  font-weight: 600;
-  font-size: 1.4rem;
-  text-align: left;
-}
-
 #paod .icon {
   font-size: 2rem;
   // padding-left: 0.3rem;
@@ -359,6 +349,8 @@ body#paod {
   justify-content: flex-start;
 }
 
+// PAOD Texts
+
 #paod .name {
   font-size: 2rem;
 
@@ -373,6 +365,16 @@ body#paod {
   text-align: left;
 }
 
+#paod .btn {
+  background-color: #F7DBF0 !important;
+  border: none;
+  border-radius: 0;
+  color: grey;
+  font-weight: 500;
+  font-size: 1.25rem;
+  text-align: left;
+}
+
 // row adjust
 
 #paod .col-9{
@@ -384,6 +386,19 @@ body#paod {
 
 #paod .row {
   margin-right: 0;
+
+}
+
+#paod .col-3 {
+  padding-right: 0;
+
+}
+
+.function-text {
+
+}
+
+.function-title {
 
 }
 
@@ -437,6 +452,10 @@ body#paod {
 
 }
 
+.grade {
+  background-color: greenyellow;
+}
+
 // Changing default alert-design
 #paod .alert {
 
@@ -445,4 +464,38 @@ body#paod {
 #paod .alert-warning {
   background-color: none;
   border: none;
+}
+
+// PAOD responsive
+
+@media (max-width: 1030px) {
+  // make a toggle when shrink. need to search bootstrap
+  #paod .col-3 {
+    visibility: hidden;
+  }
+
+  .paod-shadow {
+    margin-bottom: 1.5rem;
+  }
+
+
+
+  // #paod .name {
+  //   font-size: 1rem;
+  // }
+  // #paod .role-text {
+  //   font-size: 0.9rem;
+  // }
+  //
+  // #paod .icon {
+  //   font-size: 1rem;
+  // }
+  //
+  // #paod .btn {
+  //   font-size: 0.8rem;
+  // }
+  // .function-text {
+  //   font-size: 0.5rem;
+  // }
+
 }

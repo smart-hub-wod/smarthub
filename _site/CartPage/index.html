@@ -383,7 +383,7 @@
 
   <h1 class="cart-heading"> Cart Summary </h1>
   <!-- 1 card == 1 course -->
-  <div class="card">
+  <div id="course1" class="card">
     <!-- self-end in addition, the buttons will align vertically, if want horizontal use align-items: stretch -->
     <div class="card-header" style="">
       <button onclick="" type="button" class="btn btn-dark"> Remove </button>
@@ -421,8 +421,9 @@
 
   </div>
 
-  <div class="card">
+  <div  class="card">
     <!-- self-end in addition, the buttons will align vertically, if want horizontal use align-items: stretch -->
+    <!-- Here the id of the course should be gotten from the site.data place -->
     <div class="card-header" style="">
       <button onclick="" type="button" class="btn btn-dark"> Remove </button>
     </div>
@@ -908,7 +909,7 @@
 <script type="text/javascript" src="/assets/js/jquery-latest.min.js"></script>
 <script type="text/javascript" src="/assets/fancybox/jquery.fancybox.pack.js"></script>
 <!-- fancy box script for gallery ends -->
-  
+
 <!-- bootstrap script -->
 <script src="/assets/js/popper.min.js"></script>
 <script src="/assets/js/bootstrap.min.js"></script>
@@ -974,6 +975,13 @@ $(document).ready(function() {
   });
 });
 </script>
+
+<!-- adding jsfile for different pages -->
+
+
+<script src="../page-js-files/CartPage.js" charset="utf-8"></script>
+
+
 
 </body>
 <!-- body section ends -->
